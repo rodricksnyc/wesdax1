@@ -1,0 +1,33 @@
+{
+  "name": "asp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-node": "0.0.1-security",
+    "jquery": "^3.4.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-watch": "^7.0.0"
+  },
+  "scripts": {
+    "build": "babel src -d build",
+    "start": "nodemon --exec babel-node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodricksnyc/asp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodricksnyc/asp/issues"
+  },
+  "homepage": "https://github.com/rodricksnyc/asp#readme"
+}

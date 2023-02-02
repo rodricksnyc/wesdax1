@@ -1,0 +1,662 @@
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<meta Content-type="text/plain" charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Westat's WesDaX</title>
+
+<link type="image/png" href="images/favicon.ico" rel="icon">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.3/dist/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="font-awesome-pro/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="font/css/all.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/footer.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+
+
+</head>
+
+
+<body>
+<a href="#themaincontent" id="skiptocontent" tabindex="1" aria-hidden="false">skip to main content</a>
+<div class="container-fluid view1">
+
+	<div class="navigation-wrap bg-light start-header start-style">
+
+		<div class="row">
+			<div class="col-12">
+
+				<nav class="navbar navbar-expand-xl navbar-light">
+					<div class="navbar-collapse collapse order-1 order-md-0 dual-collapse2" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto py-4 py-md-0">
+
+							<li class="projects" tabindex="0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fal fa-angle-left"></i>
+								<i class="fas fa-circle"><p class="initials">PN</p></i>
+								<h3>Project Name</h3>
+							</li>
+							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+								<a class="nav-link" href="index.html" tabindex="0">Welcome</a>
+								<i class="fal fa-door-open"></i>
+							</li>
+
+							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+								<a class="nav-link" href="view1.html" tabindex="0">Analysis</a>
+								<i class="fal fal fa-chart-bar"></i>
+							</li>
+
+							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+								<a class="nav-link" href="reports.html" tabindex="0">Reports</a>
+								<i class="fal fa-clipboard-list"></i>
+							</li>
+							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+
+								<a class="nav-link" href="documents.html">Documents</a>
+								<i class="fal fa-file-alt"></i>
+							</li>
+							<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+								<a class="nav-link" href="about.html">About</a>
+								<i class="fal fa-info-circle"></i>
+							</li>
+						</ul>
+
+						<ul class="navbar-nav ml-auto nav-flex-icons">
+
+							<a class="navbar-brand" href="default.html" target="_blank">
+								<img src="images/logo.svg" alt="WesDax Logo">
+							</a>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0" role="button">
+									<h6 class="user">{{USER}}</h6>
+
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link signOut" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">
+									<i class="fal fa-sign-out-alt"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+				</nav>
+
+			</div>
+		</div>
+
+	</div>
+
+			<div class="content-spacer"></div>
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+
+					<div id="slideOutLeft">
+					  <div class="selectProject">&ndash; Select a Project &ndash;</div>
+
+					    <div class="projects" aria-expanded="false" role="button" aria-hidden="false" tabindex="0">
+					      <div class="across">
+					      <i class="fas fa-circle"><p class="initials">PN</p></i><h3>Project Name</h3>
+
+					      </div>
+					      <div class="close-project" aria-expanded="false" role="button" aria-hidden="true" tabindex="-1">
+					        <i class="fal fa-angle-double-left"></i>
+					      </div>
+					  </div>
+					  <div id="accordion">
+					    <div class="panel">
+					      <div class="panel-header" id="acs">
+					        <h5 class="mb-0">
+					          <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-hidden="true" tabindex="-1">
+					            ACS-PUMS
+					          </a>
+					        </h5>
+					      </div>
+					      <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="acs">
+					        <div class="panel-body">
+					          <div id="accordion-1" class="accordions">
+					            <div class="card-body">
+					              <h5>
+					                <!--**Tsigereda, I am using the # instead of the path to the new screen view for demo purposes only- but I left the correct href below that is currently being used on the site to switch screen views -->
+
+					                <a class="listOptions" href="index.html" title="ACS-PUMS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+					                <!-- <a class="listOptions" href="RptList.aspx?ScreenID=15037" title="ACS-PUMS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+					              </h5>
+					            </div>
+
+					            <div class="card-body">
+					              <h5>
+
+					                <a class="listOptions" href="about.html" title="ACS-PUMS – About" role="menuitem" tabindex="0">About</a>
+
+					              </h5>
+					            </div>
+
+
+					            <div class="card-body">
+					              <h5>
+
+					                <a class="listOptions" href="view1.html" title="ACS-PUMS – Analysis on Demand" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+					              </h5>
+					            </div>
+
+					            <div class="panel">
+					              <div class="panel-header" id="acs-dataset">
+					                <h5 class="mb-0">
+					                  <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+					                    Select a dataset for queries
+					                  </a>
+					                </h5>
+					              </div>
+					              <div id="collapse-1-2" class="collapse nested" data-parent="#accordion-1" aria-labelledby="acs-dataset">
+					                <div class="card-body">
+					                  <ul class="accordion-items" role="menu" aria-hidden="false">
+					                    <li>
+					                      <a class="listOptions" href="#" title="ACS-PUMS – Household 2015" role="menuitem" tabindex="0">Household 2015</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15035" title="ACS-PUMS – Household 2015" role="menuitem" tabindex="0">Household 2015</a> -->
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="ACS-PUMS – Person 2015" role="menuitem" tabindex="0">Person 2015</a>
+
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15036" title="ACS-PUMS – Person 2015" role="menuitem" tabindex="0">Person 2015</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="ACS-PUMS – Household 2016" role="menuitem" tabindex="0">Household 2016</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15056" title="ACS-PUMS – Household 2016" role="menuitem" tabindex="0">Household 2016</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="ACS-PUMS – Person 2016" role="menuitem" tabindex="0">Person 2016</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15057" title="ACS-PUMS – Person 2016" role="menuitem" tabindex="0">Person 2016</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="ACS-PUMS – Household 2017" role="menuitem" tabindex="0">Household 2017</a>
+
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15144" title="ACS-PUMS – Household 2017" role="menuitem" tabindex="0">Household 2017</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="ACS-PUMS – Person 2017" role="menuitem" tabindex="0">Person 2017</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15145" title="ACS-PUMS – Person 2017" role="menuitem" tabindex="0">Person 2017</a> -->
+					                    </li>
+					                  </ul>
+					                </div>
+					              </div>
+					            </div>
+					          </div>
+
+					        </div>
+					      </div>
+					    </div>
+
+					    <!-- newone -->
+
+					    <div class="panel">
+					      <div class="panel-header" id="brfss">
+					        <h5 class="mb-0">
+					          <a role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" aria-hidden="true" tabindex="-1">
+					            BRFSS
+					          </a>
+					        </h5>
+					      </div>
+					      <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="brfss">
+					        <div class="panel-body">
+					          <div id="accordion-2" class="accordions">
+					            <div class="card-body">
+					              <h5>
+					                <a class="listOptions" href="index.html" title="BRFSS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+					                <!-- <a class="listOptions" href="RptList.aspx?ScreenID=47" title="BRFSS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+					              </h5>
+					            </div>
+					            <div class="card-body">
+					              <h5>
+					                <a class="listOptions" href="#" title="BRFSS – Documents" role="menuitem" tabindex="0">Documents</a>
+					                <!-- <a class="listOptions" href="RptList.aspx?ScreenID=48" title="BRFSS – Documents" role="menuitem" tabindex="0">Documents</a> -->
+					              </h5>
+					            </div>
+
+					            <div class="card-body">
+					              <h5>
+					                <a class="listOptions" href="about.html" title="BRFSS – About the Data" role="menuitem" tabindex="0">About the Data</a>
+					                <!-- <a class="listOptions" href="RptList.aspx?ScreenID=14778" title="BRFSS – About the Data" role="menuitem" tabindex="0">About the Data</a> -->
+					              </h5>
+					            </div>
+
+					            <div class="card-body">
+					              <h5>
+					                <a class="listOptions" href="view1.html" title="BRFSS – Create a query" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+					              </h5>
+					            </div>
+
+
+					            <div class="panel">
+					              <div class="panel-header" id="brfss-reports">
+					                <h5 class="mb-0">
+					                  <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2-1" aria-expanded="false" aria-controls="collapse-2-1">
+					                    Customized Reports
+					                  </a>
+					                </h5>
+					              </div>
+					              <div id="collapse-2-1" class="collapse nested" data-parent="#accordion-1" aria-labelledby="brfss-reports">
+					                <div class="card-body">
+
+					                  <ul class="accordion-items" role="menu" aria-hidden="false">
+					                    <li>
+					                      <a class="listOptions" href="#" title="BRFSS – Run Distributions &amp; Summary Statistics" role="menuitem" tabindex="0">Run Distributions &amp; Summary Statistics</a>
+
+					                      <!-- <a class="listOptions" href="RptList.aspx?ScreenID=14782" title="BRFSS – Run Distributions &amp; Summary Statistics" role="menuitem" tabindex="0">Run Distributions &amp; Summary Statistics</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="BRFSS – Run a Regression" role="menuitem" tabindex="0">Run a Regression</a>
+
+					                      <!-- <a class="listOptions" href="RptList.aspx?ScreenID=14783" title="BRFSS – Run a Regression" role="menuitem" tabindex="0">Run a Regression</a> -->
+
+					                    </li>
+					                  </ul>
+					                </div>
+					              </div>
+					            </div>
+					          </div>
+
+					        </div>
+					      </div>
+					    </div>
+					    <!-- newone -->
+
+					    <div class="panel">
+					      <div class="panel-header" id="ccd">
+					        <h5 class="mb-0">
+					          <a role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" aria-hidden="true" tabindex="-1">
+					            CCD
+					          </a>
+					        </h5>
+					      </div>
+					      <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="ccd">
+					        <div class="panel-body">
+					          <div id="accordion-3" class="accordions">
+					            <div class="card-body">
+					              <h5>
+					                <a class="listOptions" href="index.html" title="CCD – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+					                <!-- <a class="listOptions" href="RptList.aspx?ScreenID=15041" title="CCD – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+					              </h5>
+					            </div>
+
+					            <div class="card-body">
+					              <h5>
+					                <a class="listOptions" href="view1.html" title="CCD – Welcome" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+					              </h5>
+					            </div>
+
+					            <div class="panel">
+					              <div class="panel-header" id="ccd-dataset">
+					                <h5 class="mb-0">
+					                  <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3-1" aria-expanded="false" aria-controls="collapse-3-1">
+					                    Select a dataset for queries
+					                  </a>
+					                </h5>
+					              </div>
+					              <div id="collapse-3-1" class="collapse nested" data-parent="#accordion-3" aria-labelledby="ccd-dataset">
+					                <div class="card-body">
+					                  <ul class="accordion-items" role="menu" aria-hidden="false">
+
+					                    <li>
+					                      <a class="listOptions" href="#" title="CCD – CCD 2014-15" role="menuitem" tabindex="0">CCD 2014-15</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15042" title="CCD – CCD 2014-15" role="menuitem" tabindex="0">CCD 2014-15</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CCD – CCD 2015-16" role="menuitem" tabindex="0">CCD 2015-16</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15061" title="CCD – CCD 2015-16" role="menuitem" tabindex="0">CCD 2015-16</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CCD – CCD 2016-17" role="menuitem" tabindex="0">CCD 2016-17</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15140" title="CCD – CCD 2016-17" role="menuitem" tabindex="0">CCD 2016-17</a> -->
+
+					                    </li>
+
+					                  </ul>
+					                </div>
+					              </div>
+					            </div>
+					          </div>
+
+					        </div>
+					      </div>
+					    </div>
+
+					    <!-- newone -->
+
+					    <div class="panel">
+					      <div class="panel-header" id="cps">
+					        <h5 class="mb-0">
+					          <a role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4" aria-hidden="true" tabindex="-1">
+					            CPS
+					          </a>
+					        </h5>
+					      </div>
+					      <div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="cps">
+					        <div class="panel-body">
+					          <div id="accordion-4" class="accordions">
+					            <div class="card-body">
+					              <h5>
+					                <a class="listOptions" href="index.html" title="CPS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+					                <!-- <a class="listOptions" href="RptList.aspx?ScreenID=15043" title="CPS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+					              </h5>
+					            </div>
+
+					            <div class="card-body">
+					              <h5>
+
+					                <a class="listOptions" href="view1.html" title="CPS – Welcome" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+					              </h5>
+					            </div>
+
+					            <div class="panel">
+					              <div class="panel-header" id="cps-dataset">
+					                <h5 class="mb-0">
+					                  <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-4-1" aria-expanded="false" aria-controls="collapse-4-1">
+					                    Select a dataset for queries
+					                  </a>
+					                </h5>
+					              </div>
+					              <div id="collapse-4-1" class="collapse nested" data-parent="#accordion-4" aria-labelledby="cps-dataset">
+					                <div class="card-body">
+					                  <ul class="accordion-items" role="menu" aria-hidden="false">
+
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Household 2016" role="menuitem" tabindex="0">Household 2016</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15045" title="CPS – Household 2016" role="menuitem" tabindex="0">Household 2016</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Person 2016" role="menuitem" tabindex="0">Person 2016</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15046" title="CPS – Person 2016" role="menuitem" tabindex="0">Person 2016</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Family 2016" role="menuitem" tabindex="0">Family 2016</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15047" title="CPS – Family 2016" role="menuitem" tabindex="0">Family 2016</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Household 2017" role="menuitem" tabindex="0">Household 2017</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15058" title="CPS – Household 2017" role="menuitem" tabindex="0">Household 2017</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Person 2017" role="menuitem" tabindex="0">Person 2017</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15059" title="CPS – Person 2017" role="menuitem" tabindex="0">Person 2017</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Family 2017" role="menuitem" tabindex="0">Family 2017</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15060" title="CPS – Family 2017" role="menuitem" tabindex="0">Family 2017</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Household 2018" role="menuitem" tabindex="0">Household 2018</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15142" title="CPS – Household 2018" role="menuitem" tabindex="0">Household 2018</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Person 2018" role="menuitem" tabindex="0">Person 2018</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15143" title="CPS – Person 2018" role="menuitem" tabindex="0">Person 2018</a> -->
+
+					                    </li>
+					                    <li>
+					                      <a class="listOptions" href="#" title="CPS – Family 2018" role="menuitem" tabindex="0">Family 2018</a>
+					                      <!-- <a class="listOptions" href="Dim.aspx?ScreenID=15141" title="CPS – Family 2018" role="menuitem" tabindex="0">Family 2018</a> -->
+
+					                    </li>
+
+
+					                  </ul>
+					                </div>
+					              </div>
+					            </div>
+					          </div>
+
+					        </div>
+					      </div>
+					    </div>
+
+
+					  </div>
+
+					</div>
+
+
+					<div id="slideOutRight">
+					  <div id="one" class="orangeTab" role="button" data-toggle="tab" tabindex="0" aria-label="Contact">
+					    <center>
+					      <p>Zip Case&nbsp;&nbsp;<i class="fal fa-file-archive"></i></p>
+					    </center>
+					  </div>
+					  <div class="modal-content">
+					    <div class="modal-header">
+					      <div class="across">
+					        <span class="orange">
+					          <i class="fal fa-history"></i>
+					        </span>
+					        <p class="fileHistory orange">View File History</p>
+					      </div>
+					      <div class="closeThisPlease" id="close">
+					        <button type="button" role="button" class="close" data-dismiss="modal" id="closeThisPlease" tabindex="0" aria-hidden="false" style="opacity:1" aria-label="Close">
+					          <span aria-hidden="true">
+					            <i class="fal fa-angle-double-right orange"></i>
+					          </span>
+					        </button>
+					      </div>
+					    </div>
+					    <div class="modal-body">
+					      <div class="row">
+					        <div class="col-lg-8">
+					          <p class="blue strong">Document Description<p>
+					          </div>
+					          <div class="col-lg-2">
+					            <p class="blue strong">Action</p>
+					          </div>
+					          <div class="col-lg-1">
+					            <p class="blue strong">Remove</p>
+					          </div>
+					        </div>
+					        <hr class="orange"></hr>
+					        <div class="row">
+					          <div class="col-lg-8">
+					            <p class="zipCaseDocument">{{data data data data}} PDF</p>
+					            <p class="zipCaseDate smaller">Added {{data}}</p>
+					          </div>
+					          <div class="col-lg-2">
+					            <p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+					          </div>
+					          <div class="col-lg-1">
+					            <i class="fal fa-trash-alt orange"></i>
+					          </div>
+					        </div>
+					        <hr class="black"></hr>
+
+					        <div class="row">
+					          <div class="col-lg-8">
+					            <p class="zipCaseDocument">{{data data data data}} PDF </p>
+					            <p class="zipCaseDate smaller">Added {{data data data data}}</p>
+					          </div>
+					          <div class="col-lg-2">
+					            <p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+					          </div>
+					          <div class="col-lg-1">
+					            <i class="fal fa-trash-alt orange"></i>
+					          </div>
+					        </div>
+					        <hr class="black"></hr>
+					        <div class="row">
+					          <div class="col-lg-8">
+					            <p class="zipCaseDocument">{{data data data data}} PDF </p>
+					            <p class="zipCaseDate smaller">Added {{data data data data}}</p>
+					          </div>
+					          <div class="col-lg-2">
+					            <p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+					          </div>
+					          <div class="col-lg-1">
+					            <i class="fal fa-trash-alt orange"></i>
+					          </div>
+					        </div>
+					        <hr class="black"></hr>
+					        <div class="row">
+					          <div class="col-lg-8">
+					            <p class="zipCaseDocument">{{data data data data}} PDF </p>
+					            <p class="zipCaseDate smaller">Added {{data data data data}}</p>
+					          </div>
+					          <div class="col-lg-2">
+					            <p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+					          </div>
+					          <div class="col-lg-1">
+					            <i class="fal fa-trash-alt orange"></i>
+					          </div>
+					        </div>
+					        <hr class="black"></hr>
+					        <div class="row">
+					          <div class="col-lg-8">
+					            <p class="zipCaseDocument">{{data data data data}} PDF </p>
+					            <p class="zipCaseDate smaller">Added {{data data data data}}</p>
+					          </div>
+					          <div class="col-lg-2">
+					            <p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+					          </div>
+					          <div class="col-lg-1">
+					            <i class="fal fa-trash-alt orange"></i>
+					          </div>
+					        </div>
+					        <hr class="black"></hr>
+					        <div class="row">
+					          <div class="col-lg-8">
+					            <p class="zipCaseDocument">{{data data data data}} PDF </p>
+					            <p class="zipCaseDate smaller">Added {{data data data data}}</p>
+					          </div>
+					          <div class="col-lg-2">
+					            <p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+					          </div>
+					          <div class="col-lg-1">
+					            <i class="fal fa-trash-alt orange"></i>
+					          </div>
+					        </div>
+					        <hr class="black"></hr>
+					      </div>
+					      <div class="row">
+					        <div class="col-lg-12 col-xs-12">
+					          <form>
+					            <div class="form-group">
+					              <label for="exampleFormControlTextarea1"><p class="blue strong">Notes</p></label>
+					              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notes, etc."></textarea>
+					            </div>
+
+
+					            <div class="form-group">
+					              <label for="exampleFormControlTextarea1"><p class="blue strong">Zip File Name</p></label>
+					              <input id="term_input" class="form-control allResults" placeholder="Name of file, example, etc." type="text" name="search">
+
+					            </div>
+
+					            <center>
+					              <a href="#"><div class="orangeBubble"><i class="fal fa-download">&nbsp;&nbsp;</i>Download</div></a>
+					            </center>
+
+					          </form>
+					        </div>
+					      </div>
+
+					      <!-- <div class="modal-footer">
+
+
+					    </div> -->
+					  </div>
+					</div>
+
+
+
+				</div>
+			</div>
+
+			<center>
+				<div class="row white w80">
+					<div class="col-12 col-xs-12">
+						<h4>About</h4>
+						<p>Using the WesDaX&reg; system demo site, users are able to process tabular estimates in real-time from 2013 and 2014 Behavioral Risk Factor Surveillance System (BRFSS) data that were extracted from public use files (PUFs). The BFRSS datasets underlying the system contain a subset of variables from the PUFs. A codebook is available for users to review the variable and value labels.</p>
+
+						<p>The BRFSS is the nation's premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. Established in 1984 with 15 states, BRFSS now collects data in all 50 states as well as the District of Columbia and three U.S. territories. BRFSS completes more than 400,000 adult interviews each year. Since 2011, BFRSS includes households serviced by landline, cellular telephones, or both.</p>
+
+						<p>Point estimates (e.g., totals, percentages, percentiles, ratios, means) generated from WesDaX will match published results. Replicate weights were created to facilitate variance estimation. Specifically, the delete-one jackknife replicates were formed from the final full sample weights. Therefore, the resulting WesDaX variance estimates will differ from published results, which are based on the Taylor linearization approach. Unless a specific year is selected, the frequencies and totals will reflect the two years combined.</p>
+						<center class="m2">
+							<a href="#"><div class="grayBubble"><p class="orange"><i class="fal fa-file-pdf"></i> {{DATA}} Data Dictionary (PDF)</p><div class="orangeBubble small">View</div></div></a>
+						</center>
+					</div>
+				</div>
+			</center>
+
+			<div class="backdropShadow"></div>
+		</div>
+
+		<footer>
+			<div class="footer-wrapper">
+
+				<a href="https://www.westat.com" target="_blank" title="Visit website">
+					<img src="images/footer_westat_logo.svg" alt="Westat Home page" title="Westat" class="img-wes-logo"></a> <p class="p-wes-title t-white">An Employee-Owned Research Corporation<sup class="t-white">®</sup></p></div>
+			</footer>
+
+
+			<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+
+			<script
+			src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+			integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+			crossorigin="anonymous"></script>
+
+			<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+			<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="js/bootstrap.js"></script> -->
+
+
+
+			<script type="text/javascript" src="build/index.js"></script>
+
+			</body>
+			</html>

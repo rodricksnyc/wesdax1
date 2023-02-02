@@ -1,0 +1,3436 @@
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<meta Content-type="text/plain" charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Westat's WesDaX</title>
+
+<link type="image/png" href="images/favicon.ico" rel="icon">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.3/dist/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="font-awesome-pro/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="font/css/all.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/footer.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+
+
+</head>
+
+<body class="analysis2">
+	<a href="#themaincontent" id="skiptocontent" tabindex="1" aria-hidden="false">skip to main content</a>
+	<div class="container-fluid view1">
+
+
+		<div class="navigation-wrap bg-light start-header start-style">
+
+			<div class="row">
+				<div class="col-12">
+
+					<nav class="navbar navbar-expand-xl navbar-light">
+						<div class="navbar-collapse collapse order-1 order-md-0 dual-collapse2" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+
+								<li class="projects" tabindex="0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fal fa-angle-left"></i>
+									<i class="fas fa-circle"><p class="initials">PN</p></i>
+									<h3>Project Name</h3>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="index.html" tabindex="0">Welcome</a>
+									<i class="fal fa-door-open"></i>
+								</li>
+
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a href="view1.html" class="nav-link dropdown-toggle" tabindex="0" id="navbarDropdownMenuAnalysis" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<p class="down">Analysis</p>
+									</a>
+									<i class="fal fa-chart-bar"></i>
+									<div class="dropdown-menu" id="analysis" aria-labelledby="navbarDropdownMenuAnalysis">
+										<p class="text-center navLevels">Level 1</p>
+										<a href="view1.html" class="dropdown-item">{{Data View 1}}</a>
+										<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View 2}}</a>
+										<div class="small-dropdown-menu">
+											<p class="text-center navLevels">Level 2</p>
+											<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+											<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												{{Data View B}}
+											</a>
+											<div class="small-dropdown-menu">
+												<p class="text-center navLevels">Level 3</p>
+												<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+												<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View C}}</a>
+												<div class="small-dropdown-menu">
+													<p class="text-center navLevels">Level 4</p>
+													<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+													<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+													<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View D}}</a>
+													<div class="small-dropdown-menu">
+														<p class="text-center navLevels">Level 5</p>
+														<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View B}}</a>
+														<div class="small-dropdown-menu">
+															<p class="text-center navLevels">Level 6</p>
+
+															<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+															<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+															<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View C}}</a>
+															<div class="small-dropdown-menu">
+																<p class="text-center navLevels">Level 7</p>
+
+																<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+																<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+
+																<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+																<a href="#" class="dropdown-item" type="button">{{Data View D}}</a>
+																<a href="#" class="dropdown-item" type="button">{{Data View E}}</a>
+
+
+															</div>
+															<a href="#" class="dropdown-item" type="button">{{Data View D}}</a>
+															<a href="#" class="dropdown-item" type="button">{{Data View E}}</a>
+
+														</div>
+														<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+
+														<a href="#" class="dropdown-item" type="button">{{Data View D}}</a>
+														<a href="#" class="dropdown-item" type="button">{{Data View E}}</a>
+
+													</div>
+
+													<a href="#" class="dropdown-item" type="button">{{Data View E}}</a>
+
+												</div>
+												<a href="#" class="dropdown-item" type="button">{{Data View D}}</a>
+												<a href="#" class="dropdown-item" type="button">{{Data View E}}</a>
+
+											</div>
+
+
+
+											<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+											<a href="#" class="dropdown-item" type="button">{{Data View D}}</a>
+											<a href="#" class="dropdown-item" type="button">{{Data View E}}</a>
+										</div>
+
+
+
+										<a class="dropdown-item" href="view3.html">{{Data View 3}}</a>
+										<a class="dropdown-item" href="#">{{Data View 4}}</a>
+										<a class="dropdown-item" href="#">{{Data View 5}}</a>
+										<a class="dropdown-item" href="#">{{Data View 6}}</a>
+										<a class="dropdown-item" href="#">{{Data View 7}}</a>
+									</div>
+								</li>
+								<!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+
+								<a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<p class="down">Reports</p>
+							</a>
+							<i class="fal fa-clipboard-list"></i>
+							<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">{{Report View 1}}</a>
+							<a class="dropdown-item" href="#">{{Report View 2}}</a>
+							<a class="dropdown-item" href="#">{{Report View 3}}</a>
+							<a class="dropdown-item" href="#">{{Report View 4}}</a>
+							<a class="dropdown-item" href="#">{{Report View 5}}</a>
+						</div>
+					</li> -->
+					<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+						<a href="#" class="nav-link dropdown-toggle" tabindex="0" id="navbarDropdownMenuReports" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<p class="down">Reports</p>
+						</a>
+						<i class="fal fa-clipboard-list"></i>
+						<div class="dropdown-menu" id="reports" aria-labelledby="navbarDropdownMenuReports">
+							<p class="text-center navLevels">Level 1</p>
+							<a class="dropdown-item" href="#">{{Report View 1}}</a>
+							<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Report View 2}}</a>
+							<div class="small-dropdown-menu">
+								<p class="text-center navLevels">Level 2</p>
+								<a href="#" class="dropdown-item" type="button">{{Report View A}}</a>
+								<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									{{Report View B}}
+								</a>
+								<div class="small-dropdown-menu">
+									<p class="text-center navLevels">Level 3</p>
+									<a href="#" class="dropdown-item" type="button">{{Report View B}}</a>
+									<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Report View C}}</a>
+									<div class="small-dropdown-menu">
+										<p class="text-center navLevels">Level 4</p>
+										<a href="#" class="dropdown-item" type="button">{{Report View B}}</a>
+										<a href="#" class="dropdown-item" type="button">{{Report View C}}</a>
+
+
+										<a href="#" class="dropdown-item" type="button">{{Report View D}}</a>
+
+									</div>
+									<a href="#" class="dropdown-item" type="button">{{Report View D}}</a>
+									<a href="#" class="dropdown-item" type="button">{{Report View E}}</a>
+
+								</div>
+
+
+
+								<a href="#" class="dropdown-item" type="button">{{Report View C}}</a>
+								<a href="#" class="dropdown-item" type="button">{{Report View D}}</a>
+								<a href="#" class="dropdown-item" type="button">{{Report View E}}</a>
+							</div>
+
+
+
+							<a class="dropdown-item" href="#">{{Report View 3}}</a>
+							<a class="dropdown-item" href="#">{{Report View 4}}</a>
+							<a class="dropdown-item" href="#">{{Report View 5}}</a>
+							<a class="dropdown-item" href="#">{{Report View 6}}</a>
+							<a class="dropdown-item" href="#">{{Report View 7}}</a>
+						</div>
+					</li>
+					<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+
+						<a class="nav-link" href="documents.html">Documents</a>
+						<i class="fal fa-file-alt"></i>
+					</li>
+					<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+						<a class="nav-link" href="about.html">About</a>
+						<i class="fal fa-info-circle"></i>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto nav-flex-icons">
+
+					<a class="navbar-brand" href="default.html" target="_blank">
+						<img src="images/logo.svg" alt="WesDax Logo">
+					</a>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0" role="button">
+							<h6 class="user">{{USER}}</h6>
+
+						</a>
+						<div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link signOut" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">
+							<i class="fal fa-sign-out-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</nav>
+
+	</div>
+</div>
+
+</div>
+
+<div class="content-spacer"></div>
+<div class="row">
+	<div class="col-lg-12 col-xs-12">
+
+		<div id="slideOutLeft">
+			<div class="selectProject">&ndash; Select a Project &ndash;</div>
+
+			<div class="projects" aria-expanded="false" role="button" aria-hidden="false" tabindex="0">
+				<div class="across">
+					<i class="fas fa-circle"><p class="initials">PN</p></i><h3>Project Name</h3>
+
+				</div>
+				<div class="close-project" aria-expanded="false" role="button" aria-hidden="true" tabindex="-1">
+					<i class="fal fa-angle-double-left"></i>
+				</div>
+			</div>
+			<div id="accordion">
+				<div class="panel">
+					<div class="panel-header" id="acs">
+						<h5 class="mb-0">
+							<a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-hidden="true" tabindex="-1">
+								ACS-PUMS
+							</a>
+						</h5>
+					</div>
+					<div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="acs">
+						<div class="panel-body">
+							<div id="accordion-1" class="accordions">
+								<div class="card-body">
+									<h5>
+										<!--**Tsigereda, I am using the # instead of the path to the new screen view for demo purposes only- but I left the correct href below that is currently being used on the site to switch screen views -->
+
+										<a class="listOptions" href="index.html" title="ACS-PUMS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+										<!-- <a class="listOptions" href="RptList.aspx?ScreenID=15037" title="ACS-PUMS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+									</h5>
+								</div>
+
+								<div class="card-body">
+									<h5>
+
+										<a class="listOptions" href="about.html" title="ACS-PUMS – About" role="menuitem" tabindex="0">About</a>
+
+									</h5>
+								</div>
+
+
+								<div class="card-body">
+									<h5>
+
+										<a class="listOptions" href="../view1.html" title="ACS-PUMS – Analysis on Demand" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+									</h5>
+								</div>
+
+								<div class="panel">
+									<div class="panel-header" id="acs-dataset">
+										<h5 class="mb-0">
+											<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+												Select a dataset for queries
+											</a>
+										</h5>
+									</div>
+									<div id="collapse-1-2" class="collapse nested" data-parent="#accordion-1" aria-labelledby="acs-dataset">
+										<div class="card-body">
+											<ul class="accordion-items" role="menu" aria-hidden="false">
+												<li>
+													<a class="listOptions" href="#" title="ACS-PUMS – Household 2015" role="menuitem" tabindex="0">Household 2015</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15035" title="ACS-PUMS – Household 2015" role="menuitem" tabindex="0">Household 2015</a> -->
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="ACS-PUMS – Person 2015" role="menuitem" tabindex="0">Person 2015</a>
+
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15036" title="ACS-PUMS – Person 2015" role="menuitem" tabindex="0">Person 2015</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="ACS-PUMS – Household 2016" role="menuitem" tabindex="0">Household 2016</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15056" title="ACS-PUMS – Household 2016" role="menuitem" tabindex="0">Household 2016</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="ACS-PUMS – Person 2016" role="menuitem" tabindex="0">Person 2016</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15057" title="ACS-PUMS – Person 2016" role="menuitem" tabindex="0">Person 2016</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="ACS-PUMS – Household 2017" role="menuitem" tabindex="0">Household 2017</a>
+
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15144" title="ACS-PUMS – Household 2017" role="menuitem" tabindex="0">Household 2017</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="ACS-PUMS – Person 2017" role="menuitem" tabindex="0">Person 2017</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15145" title="ACS-PUMS – Person 2017" role="menuitem" tabindex="0">Person 2017</a> -->
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- newone -->
+
+				<div class="panel">
+					<div class="panel-header" id="brfss">
+						<h5 class="mb-0">
+							<a role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" aria-hidden="true" tabindex="-1">
+								BRFSS
+							</a>
+						</h5>
+					</div>
+					<div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="brfss">
+						<div class="panel-body">
+							<div id="accordion-2" class="accordions">
+								<div class="card-body">
+									<h5>
+										<a class="listOptions" href="index.html" title="BRFSS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+										<!-- <a class="listOptions" href="RptList.aspx?ScreenID=47" title="BRFSS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+									</h5>
+								</div>
+								<div class="card-body">
+									<h5>
+										<a class="listOptions" href="#" title="BRFSS – Documents" role="menuitem" tabindex="0">Documents</a>
+										<!-- <a class="listOptions" href="RptList.aspx?ScreenID=48" title="BRFSS – Documents" role="menuitem" tabindex="0">Documents</a> -->
+									</h5>
+								</div>
+
+								<div class="card-body">
+									<h5>
+										<a class="listOptions" href="about.html" title="BRFSS – About the Data" role="menuitem" tabindex="0">About the Data</a>
+										<!-- <a class="listOptions" href="RptList.aspx?ScreenID=14778" title="BRFSS – About the Data" role="menuitem" tabindex="0">About the Data</a> -->
+									</h5>
+								</div>
+
+								<div class="card-body">
+									<h5>
+										<a class="listOptions" href="view1.html" title="BRFSS – Create a query" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+									</h5>
+								</div>
+
+
+								<div class="panel">
+									<div class="panel-header" id="brfss-reports">
+										<h5 class="mb-0">
+											<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2-1" aria-expanded="false" aria-controls="collapse-2-1">
+												Customized Reports
+											</a>
+										</h5>
+									</div>
+									<div id="collapse-2-1" class="collapse nested" data-parent="#accordion-1" aria-labelledby="brfss-reports">
+										<div class="card-body">
+
+											<ul class="accordion-items" role="menu" aria-hidden="false">
+												<li>
+													<a class="listOptions" href="#" title="BRFSS – Run Distributions &amp; Summary Statistics" role="menuitem" tabindex="0">Run Distributions &amp; Summary Statistics</a>
+
+													<!-- <a class="listOptions" href="RptList.aspx?ScreenID=14782" title="BRFSS – Run Distributions &amp; Summary Statistics" role="menuitem" tabindex="0">Run Distributions &amp; Summary Statistics</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="BRFSS – Run a Regression" role="menuitem" tabindex="0">Run a Regression</a>
+
+													<!-- <a class="listOptions" href="RptList.aspx?ScreenID=14783" title="BRFSS – Run a Regression" role="menuitem" tabindex="0">Run a Regression</a> -->
+
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- newone -->
+
+				<div class="panel">
+					<div class="panel-header" id="ccd">
+						<h5 class="mb-0">
+							<a role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" aria-hidden="true" tabindex="-1">
+								CCD
+							</a>
+						</h5>
+					</div>
+					<div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="ccd">
+						<div class="panel-body">
+							<div id="accordion-3" class="accordions">
+								<div class="card-body">
+									<h5>
+										<a class="listOptions" href="index.html" title="CCD – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+										<!-- <a class="listOptions" href="RptList.aspx?ScreenID=15041" title="CCD – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+									</h5>
+								</div>
+
+								<div class="card-body">
+									<h5>
+										<a class="listOptions" href="view1.html" title="CCD – Welcome" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+									</h5>
+								</div>
+
+								<div class="panel">
+									<div class="panel-header" id="ccd-dataset">
+										<h5 class="mb-0">
+											<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3-1" aria-expanded="false" aria-controls="collapse-3-1">
+												Select a dataset for queries
+											</a>
+										</h5>
+									</div>
+									<div id="collapse-3-1" class="collapse nested" data-parent="#accordion-3" aria-labelledby="ccd-dataset">
+										<div class="card-body">
+											<ul class="accordion-items" role="menu" aria-hidden="false">
+
+												<li>
+													<a class="listOptions" href="#" title="CCD – CCD 2014-15" role="menuitem" tabindex="0">CCD 2014-15</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15042" title="CCD – CCD 2014-15" role="menuitem" tabindex="0">CCD 2014-15</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CCD – CCD 2015-16" role="menuitem" tabindex="0">CCD 2015-16</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15061" title="CCD – CCD 2015-16" role="menuitem" tabindex="0">CCD 2015-16</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CCD – CCD 2016-17" role="menuitem" tabindex="0">CCD 2016-17</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15140" title="CCD – CCD 2016-17" role="menuitem" tabindex="0">CCD 2016-17</a> -->
+
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- newone -->
+
+				<div class="panel">
+					<div class="panel-header" id="cps">
+						<h5 class="mb-0">
+							<a role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4" aria-hidden="true" tabindex="-1">
+								CPS
+							</a>
+						</h5>
+					</div>
+					<div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="cps">
+						<div class="panel-body">
+							<div id="accordion-4" class="accordions">
+								<div class="card-body">
+									<h5>
+										<a class="listOptions" href="index.html" title="CPS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+										<!-- <a class="listOptions" href="RptList.aspx?ScreenID=15043" title="CPS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+									</h5>
+								</div>
+
+								<div class="card-body">
+									<h5>
+
+										<a class="listOptions" href="view1.html" title="CPS – Welcome" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+									</h5>
+								</div>
+
+								<div class="panel">
+									<div class="panel-header" id="cps-dataset">
+										<h5 class="mb-0">
+											<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-4-1" aria-expanded="false" aria-controls="collapse-4-1">
+												Select a dataset for queries
+											</a>
+										</h5>
+									</div>
+									<div id="collapse-4-1" class="collapse nested" data-parent="#accordion-4" aria-labelledby="cps-dataset">
+										<div class="card-body">
+											<ul class="accordion-items" role="menu" aria-hidden="false">
+
+												<li>
+													<a class="listOptions" href="#" title="CPS – Household 2016" role="menuitem" tabindex="0">Household 2016</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15045" title="CPS – Household 2016" role="menuitem" tabindex="0">Household 2016</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Person 2016" role="menuitem" tabindex="0">Person 2016</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15046" title="CPS – Person 2016" role="menuitem" tabindex="0">Person 2016</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Family 2016" role="menuitem" tabindex="0">Family 2016</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15047" title="CPS – Family 2016" role="menuitem" tabindex="0">Family 2016</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Household 2017" role="menuitem" tabindex="0">Household 2017</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15058" title="CPS – Household 2017" role="menuitem" tabindex="0">Household 2017</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Person 2017" role="menuitem" tabindex="0">Person 2017</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15059" title="CPS – Person 2017" role="menuitem" tabindex="0">Person 2017</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Family 2017" role="menuitem" tabindex="0">Family 2017</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15060" title="CPS – Family 2017" role="menuitem" tabindex="0">Family 2017</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Household 2018" role="menuitem" tabindex="0">Household 2018</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15142" title="CPS – Household 2018" role="menuitem" tabindex="0">Household 2018</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Person 2018" role="menuitem" tabindex="0">Person 2018</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15143" title="CPS – Person 2018" role="menuitem" tabindex="0">Person 2018</a> -->
+
+												</li>
+												<li>
+													<a class="listOptions" href="#" title="CPS – Family 2018" role="menuitem" tabindex="0">Family 2018</a>
+													<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15141" title="CPS – Family 2018" role="menuitem" tabindex="0">Family 2018</a> -->
+
+												</li>
+
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+		<div id="slideOutRight">
+			<div id="one" class="orangeTab" role="button" tabindex="0" aria-label="Contact">
+				<center>
+					<p>Zip Case&nbsp;&nbsp;<i class="fal fa-file-archive"></i></p>
+				</center>
+			</div>
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="across">
+						<span class="orange">
+							<i class="fal fa-history"></i>
+						</span>
+						<p class="fileHistory orange">View File History</p>
+					</div>
+					<div class="closeThisPlease" id="close">
+						<button type="button" role="button" class="close" data-dismiss="modal" id="closeThisPlease" tabindex="-1" aria-hidden="true" style="opacity:1" aria-label="Close">
+							<span aria-hidden="true">
+								<i class="fal fa-angle-double-right orange"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-8">
+							<p class="blue strong">Document Description<p>
+							</div>
+							<div class="col-lg-2">
+								<p class="blue strong">Action</p>
+							</div>
+							<div class="col-lg-1">
+								<p class="blue strong">Remove</p>
+							</div>
+						</div>
+						<hr class="orange"></hr>
+						<div class="row">
+							<div class="col-lg-8">
+								<p class="zipCaseDocument">{{data data data data}} PDF</p>
+								<p class="zipCaseDate smaller">Added {{data}}</p>
+							</div>
+							<div class="col-lg-2">
+								<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+							</div>
+							<div class="col-lg-1">
+								<i class="fal fa-trash-alt orange"></i>
+							</div>
+						</div>
+						<hr class="black"></hr>
+
+						<div class="row">
+							<div class="col-lg-8">
+								<p class="zipCaseDocument">{{data data data data}} PDF </p>
+								<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+							</div>
+							<div class="col-lg-2">
+								<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+							</div>
+							<div class="col-lg-1">
+								<i class="fal fa-trash-alt orange"></i>
+							</div>
+						</div>
+						<hr class="black"></hr>
+						<div class="row">
+							<div class="col-lg-8">
+								<p class="zipCaseDocument">{{data data data data}} PDF </p>
+								<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+							</div>
+							<div class="col-lg-2">
+								<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+							</div>
+							<div class="col-lg-1">
+								<i class="fal fa-trash-alt orange"></i>
+							</div>
+						</div>
+						<hr class="black"></hr>
+						<div class="row">
+							<div class="col-lg-8">
+								<p class="zipCaseDocument">{{data data data data}} PDF </p>
+								<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+							</div>
+							<div class="col-lg-2">
+								<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+							</div>
+							<div class="col-lg-1">
+								<i class="fal fa-trash-alt orange"></i>
+							</div>
+						</div>
+						<hr class="black"></hr>
+						<div class="row">
+							<div class="col-lg-8">
+								<p class="zipCaseDocument">{{data data data data}} PDF </p>
+								<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+							</div>
+							<div class="col-lg-2">
+								<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+							</div>
+							<div class="col-lg-1">
+								<i class="fal fa-trash-alt orange"></i>
+							</div>
+						</div>
+						<hr class="black"></hr>
+						<div class="row">
+							<div class="col-lg-8">
+								<p class="zipCaseDocument">{{data data data data}} PDF </p>
+								<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+							</div>
+							<div class="col-lg-2">
+								<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+							</div>
+							<div class="col-lg-1">
+								<i class="fal fa-trash-alt orange"></i>
+							</div>
+						</div>
+						<hr class="black"></hr>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-xs-12">
+							<form>
+								<div class="form-group">
+									<label for="exampleFormControlTextarea1"><p class="blue strong">Notes</p></label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notes, etc." tabindex="-1" aria-hidden="true"></textarea>
+
+								</div>
+
+
+								<div class="form-group">
+									<label for="term_input"><p class="blue strong">Zip File Name</p></label>
+									<input id="term_input" class="form-control allResults" placeholder="Name of file, example, etc." type="text" name="search" tabindex="-1" aria-hidden="true">
+								</div>
+
+								<center>
+									<a href="#" tabindex="-1" aria-hidden="true"><div class="orangeBubble"><i class="fal fa-download">&nbsp;&nbsp;</i>Download</div></a>
+								</center>
+
+							</form>
+						</div>
+					</div>
+
+					<!-- <div class="modal-footer">
+
+
+				</div> -->
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<div class="row d-flex">
+	<!-- <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12 col-xs-12"> -->
+	<div id="levels">
+
+		<div class="btn-group">
+			<button type="button" id="level1" tabindex="0" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">First Level<i class="fas fa-caret-down"></i></button>
+
+			<div class="dropdown-menu">
+				<a href="#" class="dropdown-item" type="button">{{Data View 1}}</a>
+				<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View 2}}</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View A}}</a>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+						<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View B}}</a>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+							<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+							<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View C}}</a>
+							<div class="dropdown-menu">
+								<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View A}}</a>
+								<div class="dropdown-menu">
+									<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+									<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View B}}</a>
+									<div class="dropdown-menu">
+										<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+										<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+										<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+									</div>
+									<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+									<a href="#" class="dropdown-item" type="button">{{Data View D}}</a>
+								</div>
+								<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+								<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+								<a href="#" class="dropdown-item" type="button">{{Data View D}}</a>
+
+							</div>
+						</div>
+						<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+					</div>
+
+					<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+					<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+				</div>
+				<a href="#" class="dropdown-item" type="button">{{Data View 3}}</a>
+				<a href="#" class="dropdown-item" type="button">{{Data View 4}}</a>
+			</div>
+
+		</div>
+
+		<div class="btn-group">
+			<button type="button" id="level2" tabindex="0" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Second Level<i class="fas fa-caret-down"></i></button>
+
+			<div class="dropdown-menu">
+				<a href="#" class="dropdown-item" type="button">{{Data View 1}}</a>
+				<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View 2}}</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+					<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+					<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+				</div>
+				<a href="#" class="dropdown-item" type="button">{{Data View 3}}</a>
+				<a href="#" class="dropdown-item" type="button">{{Data View 4}}</a>
+			</div>
+
+		</div>
+
+		<div class="btn-group">
+			<button type="button" id="level3" tabindex="0" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Third Level<i class="fas fa-caret-down"></i></button>
+
+			<div class="dropdown-menu">
+				<a href="#" class="dropdown-item" type="button">{{Data View 1}}</a>
+				<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View 2}}</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View A}}</a>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+						<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View B}}</a>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+							<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+							<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View C}}</a>
+							<div class="dropdown-menu">
+								<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+
+								<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+								<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View C}}</a>
+							</div>
+						</div>
+						<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+					</div>
+
+					<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+					<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+				</div>
+				<a href="#" class="dropdown-item" type="button">{{Data View 3}}</a>
+				<a href="#" class="dropdown-item" type="button">{{Data View 4}}</a>
+			</div>
+
+		</div>
+
+		<div class="btn-group">
+			<button type="button" id="level4" tabindex="0" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fourth Level<i class="fas fa-caret-down"></i></button>
+
+			<div class="dropdown-menu">
+				<a href="#" class="dropdown-item" type="button">{{Data View 1}}</a>
+				<a href="#" class="dropdown-item submenu" type="button" tabindex="0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Data View 2}}</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item" type="button">{{Data View A}}</a>
+					<a href="#" class="dropdown-item" type="button">{{Data View B}}</a>
+					<a href="#" class="dropdown-item" type="button">{{Data View C}}</a>
+				</div>
+				<a href="#" class="dropdown-item" type="button">{{Data View 3}}</a>
+				<a href="#" class="dropdown-item" type="button">{{Data View 4}}</a>
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+
+	<div class="col-xl-4 col-lg-3 col-md-12 col-sm-12 col-xs-12 ml-auto changeBreakpoint2">
+		<div class="tours d-flex justify-content-around align-items-center">
+			<p class="smallest">ON THIS PAGE</p>
+
+			<input type="range" min="0" value="100" max="100" role="button" tabindex="0">
+			<p class="blue">Hover Tooltips</p>
+			<!-- <button class="orangeBubble small">Tour</button> -->
+
+		</div>
+	</div>
+
+</div>
+
+<div class="content-spacer2"></div>
+
+<div class="row">
+	<div class="col-lg-8 col-xl-9 col-md-12 changeBreakpoint">
+		<div class="optionPicker">
+
+			<div class="optional-line"><p class="smallest">OPTIONAL</p></div>
+
+
+			<nav class="optionPicker-nav">
+
+				<a href="#topics" data-type="topics" class="NavItem NavItem--is-active" role="button" data-toggle="tab" tabindex="0">Topic(s)</a>
+				<a href="#stats" data-type="stats" class="NavItem" role="button" data-toggle="tab" tabindex="0">Statistical Outputs</a>
+				<a href="#data" data-type="data" class="NavItem" role="button" data-toggle="tab" tabindex="0">Subset Data</a>
+
+			</nav>
+			<div class="getResults">
+				<button type="button" class="btn btn-success" role="button" tabindex="0">
+					<i class="fas fa-calculator"></i>&nbsp;Results
+				</button>
+			</div>
+
+			<div class="optionListWindow">
+
+
+
+				<div class="option" data-type="topics">
+					<div class="row">
+
+						<div class="col-lg-6 col-md-6">
+
+							<p class="strong text-center">Browse</p>
+
+							<div id="search">
+								<div class="clearfix">
+
+									<fieldset>
+										<legend class="hidden"></legend>
+										<label for="ctl00_HeaderContentPlaceHolder_Search1_txtSearchText" id="ctl00_HeaderContentPlaceHolder_Search1_lblSearch" class="hiddenOffScreen">
+											<i class="fal fa-search searchBar"></i>
+										</label>
+										<input name="ctl00$HeaderContentPlaceHolder$Search1$txtSearchText" type="text" placeholder="Search" id="ctl00_HeaderContentPlaceHolder_Search1_txtSearchText" class="searchTopics searchTxt-default">
+
+									</fieldset>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-6 col-md-6">
+							<p class="strong text-center">Topics</p>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<p class="text-center mostSmall orange"><i class="far fa-window-restore orange"></i>&nbsp;Build your table frame (when to use categorical and when to use continuous)</p>
+						</div>
+					</div>
+					<div class="row rel">
+						<div class="col-lg-6 col-xl-6 col-md-6 variables">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 categoricalHeader activeHeading padding-0">
+									<a href="javascript:void(0)"><div class="heading"><p class="text-center">Categorical Variables</p></div></a>
+								</div>
+								<div class="col-lg-6 col-xl-6 col-md-6 continuousHeader inactiveHeading padding-0">
+									<a href="javascript:void(0)"><div class="heading"><p class="text-center">Continuous Variables</p></div></a>
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="col-lg-12 col-md-12 tableVariables padding-0">
+									<ul class="accordion">
+										<li>
+											<a class="level0" name="Dogs Breeds" value="Dog Breeds" role="menuitem" tabindex="0">Dog Breeds</a>
+
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#" role="menuitem" tabindex="0">Level 1 Topic Area (one level deep)</a>
+											<ul class="inner level1">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList" name="Dogs Breeds" value="Dog Breeds" role="menuitem" tabindex="0"><li>Dog Breeds</li></a>
+											</ul>
+										</li>
+
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (two levels deep)</a>
+											<ul class="inner level2">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList" value="Dog Breeds 2" role="menuitem" tabindex="0">Dog Breeds 2</a>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+
+
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (three levels deep)</a>
+
+											<ul class="inner level3">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList" value="Dog Breeds 3" role="menuitem" tabindex="0">Dog Breeds 3</a>
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (four levels deep)</a>
+											<ul class="inner level4">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList" value="Dog Breeds 4" role="menuitem" tabindex="0">Dog Breeds 4</a>
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (five levels deep)</a>
+											<ul class="inner level5">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																		</div>
+
+																		<div>
+
+																			<a href="#" class="toggle child4">Level 5</a>
+																			<ul class="inner">
+																				<div class="nestedBlock">
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList" value="Dog Breeds 5" role="menuitem" tabindex="0">Dog Breeds 5</a>
+																				</div>
+
+																			</ul>
+
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (six levels deep)</a>
+											<ul class="inner level6">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																		</div>
+
+																		<div>
+
+																			<a href="#" class="toggle child4">Level 5</a>
+																			<ul class="inner">
+																				<div class="nestedBlock">
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																				</div>
+
+																				<div>
+
+																					<a href="#" class="toggle child5">Level 6</a>
+																					<ul class="inner">
+																						<div class="nestedBlock">
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList" value="Dog Breeds 6" role="menuitem" tabindex="0">Dog Breeds 6</a>
+																						</div>
+
+																					</ul>
+
+																				</div>
+
+																			</ul>
+
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (seven levels deep)</a>
+											<ul class="inner level7">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																		</div>
+
+																		<div>
+
+																			<a href="#" class="toggle child4">Level 5</a>
+																			<ul class="inner">
+																				<div class="nestedBlock">
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																				</div>
+
+																				<div>
+
+																					<a href="#" class="toggle child5">Level 6</a>
+																					<ul class="inner">
+																						<div class="nestedBlock">
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList">Level 7 Topic Area</a>
+																						</div>
+
+																						<div>
+
+																							<a href="#" class="toggle child6">Level 7</a>
+																							<ul class="inner">
+																								<div class="nestedBlock">
+																									<a class="addToList">Level 8 Topic Area</a>
+																									<a class="addToList">Level 8 Topic Area</a>
+																									<a class="addToList" value="Dog Breeds 7" role="menuitem" tabindex="0">Dog Breeds 7</a>
+																								</div>
+
+																							</ul>
+
+																						</div>
+
+																					</ul>
+
+																				</div>
+
+																			</ul>
+
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+
+									</ul>
+
+
+								</div>
+
+								<div class="col-lg-12 col-md-12 analysisVariables padding-0 hidden">
+									<ul class="accordion">
+										<li>
+											<a class="level0" name="Cat Breeds" value="Dog Breeds" role="menuitem" tabindex="0">Cat Breeds</a>
+
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#" role="menuitem" tabindex="0">Level 1 Topic Area (one level deep)</a>
+											<ul class="inner level1">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList" name="Cat Breeds" value="Dog Breeds" role="menuitem" tabindex="0"><li>Cat Breeds</li></a>
+											</ul>
+										</li>
+
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (two levels deep)</a>
+											<ul class="inner level2">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList" value="Cat Breeds 2" role="menuitem" tabindex="0">Cat Breeds 2</a>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+
+
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (three levels deep)</a>
+
+											<ul class="inner level3">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList" value="Cat Breeds 3" role="menuitem" tabindex="0">Cat Breeds 3</a>
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (four levels deep)</a>
+											<ul class="inner level4">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList" value="Cat Breeds 4" role="menuitem" tabindex="0">Cat Breeds 4</a>
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (five levels deep)</a>
+											<ul class="inner level5">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																		</div>
+
+																		<div>
+
+																			<a href="#" class="toggle child4">Level 5</a>
+																			<ul class="inner">
+																				<div class="nestedBlock">
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList" value="Cat Breeds 5" role="menuitem" tabindex="0">Cat Breeds 5</a>
+																				</div>
+
+																			</ul>
+
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (six levels deep)</a>
+											<ul class="inner level6">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																		</div>
+
+																		<div>
+
+																			<a href="#" class="toggle child4">Level 5</a>
+																			<ul class="inner">
+																				<div class="nestedBlock">
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																				</div>
+
+																				<div>
+
+																					<a href="#" class="toggle child5">Level 6</a>
+																					<ul class="inner">
+																						<div class="nestedBlock">
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList" value="Cat Breeds 6" role="menuitem" tabindex="0">Cat Breeds 6</a>
+																						</div>
+
+																					</ul>
+
+																				</div>
+
+																			</ul>
+
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+										<li>
+											<a class="toggle parent" href="#">Level 1 Topic Area (seven levels deep)</a>
+											<ul class="inner level7">
+												<a class="addToList"><li>Level 2 Topic Area</li></a>
+
+												<li>
+													<a href="#" class="toggle child1">Level 2</a>
+													<div class="inner">
+														<div class="nestedBlock">
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+															<a class="addToList">Level 3 Topic Area</a>
+														</div>
+
+														<div>
+
+															<a href="#" class="toggle child2">Level 3</a>
+															<ul class="inner">
+																<div class="nestedBlock">
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																	<a class="addToList">Level 4 Topic Area</a>
+																</div>
+
+																<div>
+
+																	<a href="#" class="toggle child3">Level 4</a>
+																	<ul class="inner">
+																		<div class="nestedBlock">
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																			<a class="addToList">Level 5 Topic Area</a>
+																		</div>
+
+																		<div>
+
+																			<a href="#" class="toggle child4">Level 5</a>
+																			<ul class="inner">
+																				<div class="nestedBlock">
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																					<a class="addToList">Level 6 Topic Area</a>
+																				</div>
+
+																				<div>
+
+																					<a href="#" class="toggle child5">Level 6</a>
+																					<ul class="inner">
+																						<div class="nestedBlock">
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList">Level 7 Topic Area</a>
+																							<a class="addToList">Level 7 Topic Area</a>
+																						</div>
+
+																						<div>
+
+																							<a href="#" class="toggle child6">Level 7</a>
+																							<ul class="inner">
+																								<div class="nestedBlock">
+																									<a class="addToList">Level 8 Topic Area</a>
+																									<a class="addToList">Level 8 Topic Area</a>
+																									<a class="addToList" value="Cat Breeds 7" role="menuitem" tabindex="0">Cat Breeds 7</a>
+																								</div>
+
+																							</ul>
+
+																						</div>
+
+																					</ul>
+
+																				</div>
+
+																			</ul>
+
+																		</div>
+
+																	</ul>
+
+																</div>
+
+															</ul>
+
+														</div>
+													</div>
+												</li>
+
+											</ul>
+										</li>
+
+
+									</ul>
+
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-6 col-md-6 mNeg4">
+
+							<div class="selectTopic">
+								<i class="fal fa-angle-left"></i>
+								<p>Select a<br>Topic Area</p>
+
+							</div>
+
+							<div class="listArea">
+								<div class="selectedLevels">
+									<p class="blue">Level <span class="levelTopicListNumber"></span> Topic List Area <span class="levelTopicAreaNumber"> </span></p>
+									<button type="button" class="close closeLevels" aria-label="Close" tabindex="0">
+										<i class="fal fa-minus"></i>
+									</button>
+								</div>
+
+
+								<form method="post" class="topicLevels" data-draggable="target">
+									<div class="allLevels custom-control custom-checkbox">
+										<input type="checkbox" name="allLevels" class="custom-control-input" id="allLevels">
+										<label class="custom-control-label" for="allLevels"><p class="blue">ALL</p></label>
+										<span class="plusRow">
+											<i class="fas fa-plus"></i>&nbsp;as&nbsp;
+											<button type="button" class="btn btn-success addAsRow" tabindex="0" role="button">
+												row&nbsp;
+												<i class="fal fa-bars"></i>
+											</button>
+										</span>
+									</span>
+								</div>
+								<div data-draggable="item" class="levels custom-control custom-checkbox">
+									<input type="checkbox" name="levels" data-level="Golden Retriever" value="Golden Retriever" class="custom-control-input" id="GoldenRetriever">
+									<label class="custom-control-label" for="GoldenRetriever">
+										<p class="blue">Golden Retriever&nbsp;
+											<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+										</p>
+									</label>
+									<div class="collapse">
+										<div class="card card-body">
+											<div class="horizontal">
+												<p>Variable Name:</p>
+												<ul class="variableName">
+													<li name="variableName" data-variable="Dog Size" value="Dog Size" id="DogSize">Dog Size</li>
+												</ul>
+											</div>
+											<div class="horizontal">
+												<p>Categories:</p>
+												<ul class="categories">
+													<li>
+														<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+															<i class="fal fa-ellipsis-v reorderSort"></i>
+															<input type="checkbox" name="categories" data-category="Small Dog" value="Small Dog" class="custom-control-input" id="SmallDog">
+															<label class="custom-control-label" for="SmallDog">
+																<p>Small Dog&nbsp;
+																</p>
+															</label>
+															<div class="reorderOptions">
+																<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+															</div>
+														</div>
+														<p class="hideInModal">Small Dog</p>
+													</li>
+													<li>
+														<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+															<i class="fal fa-ellipsis-v reorderSort"></i>
+															<input type="checkbox" name="categories" data-category="Medium Dog" value="Medium Dog" class="custom-control-input" id="MediumDog">
+															<label class="custom-control-label" for="MediumDog">
+																<p>Medium Dog&nbsp;
+																</p>
+															</label>
+															<div class="reorderOptions">
+																<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+															</div>
+														</div>
+														<p class="hideInModal">Medium Dog</p>
+													</li>
+													<li>
+														<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+															<i class="fal fa-ellipsis-v reorderSort"></i>
+															<input type="checkbox" name="categories" data-category="Large Dog" value="Large Dog" class="custom-control-input" id="LargeDog">
+															<label class="custom-control-label" for="LargeDog">
+																<p>Large Dog&nbsp;
+																</p>
+															</label>
+															<div class="reorderOptions">
+																<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+															</div>
+														</div><p class="hideInModal">Large Dog</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+									</div>
+									<div class='deleteOptions'>
+										<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+									</div>
+									<div class="endOptions">
+										<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+										<div class="orangeHover">
+											<div class="blockAcross">
+												<div class="vertical pl1 addRow" role="button" tabindex="0">
+													<i class="far fa-bars"></i>
+													<p class="evenSmaller">row</p>
+												</div>
+												<div class="vertical pl1 addColumn" role="button" tabindex="0">
+													<i class="fal fa-line-columns"></i>
+													<p class="evenSmaller">column</p>
+												</div>
+												<div class="vertical pl1 addLayer" role="button" tabindex="0">
+													<i class="fal fa-layer-group"></i>
+													<p class="evenSmaller">layer</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-draggable="item" class="levels custom-control custom-checkbox">
+									<input type="checkbox" name="levels" data-level="Poodle" value="Poodle" class="custom-control-input" id="Poodle">
+									<label class="custom-control-label" for="Poodle">
+										<p class="blue">Poodle&nbsp;
+											<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+										</p>
+									</label>
+									<div class="collapse">
+										<div class="card card-body">
+											<div class="horizontal">
+												<p>Variable Name:</p>
+												<ul class="variableName">
+													<li name="variableName" data-variable="Dog Color" value="Dog Color" id="DogColor">Dog Color</li>
+												</ul>
+											</div>
+											<div class="horizontal">
+												<p>Categories:</p>
+												<ul class="categories">
+													<li>
+														<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+															<i class="fal fa-ellipsis-v reorderSort"></i>
+															<input type="checkbox" name="categories" data-category="Black Poodle" value="Black Poodle" class="custom-control-input" id="BlackPoodle">
+															<label class="custom-control-label" for="BlackPoodle">
+																<p>Black Poodle&nbsp;
+																</p>
+															</label>
+															<div class="reorderOptions">
+																<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+															</div>
+														</div>
+														<p class="hideInModal">Black Poodle</p>
+													</li>
+													<li>
+														<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+															<i class="fal fa-ellipsis-v reorderSort"></i>
+															<input type="checkbox" name="categories" data-category="White Poodle" value="White Poodle" class="custom-control-input" id="WhitePoodle">
+															<label class="custom-control-label" for="WhitePoodle">
+																<p>White Poodle&nbsp;
+																</p>
+															</label>
+															<div class="reorderOptions">
+																<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+															</div>
+														</div><p class="hideInModal">White Poodle</p>
+													</li>
+													<li>
+														<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+															<i class="fal fa-ellipsis-v reorderSort"></i>
+															<input type="checkbox" name="categories" data-category="Grey Poodle" value="Grey Poodle" class="custom-control-input" id="GreyPoodle">
+															<label class="custom-control-label" for="WhitePoodle">
+																<p>Grey Poodle&nbsp;
+																</p>
+															</label>
+															<div class="reorderOptions">
+																<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+															</div>
+														</div><p class="hideInModal">Grey Poodle</p></li>
+													</ul>
+												</div>
+											</div>
+											<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+										</div>
+										<div class='deleteOptions'>
+											<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+										</div>
+										<div class="endOptions">
+											<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+											<div class="orangeHover">
+												<div class="blockAcross">
+													<div class="vertical pl1 addRow" role="button" tabindex="0">
+														<i class="far fa-bars"></i>
+														<p class="evenSmaller">row</p>
+													</div>
+													<div class="vertical pl1 addColumn" role="button" tabindex="0">
+														<i class="fal fa-line-columns"></i>
+														<p class="evenSmaller">column</p>
+													</div>
+													<div class="vertical pl1 addLayer" role="button" tabindex="0">
+														<i class="fal fa-layer-group"></i>
+														<p class="evenSmaller">layer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-draggable="item" class="levels custom-control custom-checkbox">
+										<input type="checkbox" name="levels" data-level="Pug" value="Pug" class="custom-control-input" id="Pug">
+										<label class="custom-control-label" for="Pug">
+											<p class="blue">Pug&nbsp;
+												<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+											</p>
+										</label>
+										<div class="collapse">
+											<div class="card card-body">
+												<div class="horizontal">
+													<p>Variable Name:</p>
+													<ul class="variableName">
+														<li name="variableName" data-variable="Dog Smell" value="Dog Smell" id="DogSmell">Dog Smell</li>
+													</ul>
+												</div>
+												<div class="horizontal">
+													<p>Categories:</p>
+													<ul class="categories">
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Stinky Dog" value="Stinky Dog" class="custom-control-input" id="StinkyDog">
+																<label class="custom-control-label" for="StinkyDog">
+																	<p>Stinky Dog&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Stinky Dog</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Aromatic Dog" value="Aromatic Dog" class="custom-control-input" id="AromaticDog">
+																<label class="custom-control-label" for="StinkyDog">
+																	<p>Aromatic Dog&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Aromatic Dog</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+										</div>
+										<div class='deleteOptions'>
+											<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+										</div>
+										<div class="endOptions">
+											<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+											<div class="orangeHover">
+												<div class="blockAcross">
+													<div class="vertical pl1 addRow" role="button" tabindex="0">
+														<i class="far fa-bars"></i>
+														<p class="evenSmaller">row</p>
+													</div>
+													<div class="vertical pl1 addColumn" role="button" tabindex="0">
+														<i class="fal fa-line-columns"></i>
+														<p class="evenSmaller">column</p>
+													</div>
+													<div class="vertical pl1 addLayer" role="button" tabindex="0">
+														<i class="fal fa-layer-group"></i>
+														<p class="evenSmaller">layer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-draggable="item" class="levels custom-control custom-checkbox">
+										<input type="checkbox" name="levels" data-level="Basset Hound" value="Basset Hound" class="custom-control-input" id="BassetHound">
+										<label class="custom-control-label" for="BassetHound">
+											<p class="blue">Basset Hound&nbsp;
+												<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+											</p>
+										</label>
+										<div class="collapse">
+											<div class="card card-body">
+												<div class="horizontal">
+													<p>Variable Name:</p>
+													<ul class="variableName">
+														<li name="variableName" data-variable="Dog Age" value="Dog Age" id="DogAge">Dog Age</li>
+													</ul>
+												</div>
+												<div class="horizontal">
+													<p>Categories:</p>
+													<ul class="categories">
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="One Years Old" value="One Years Old" class="custom-control-input" id="OneYearsOld">
+																<label class="custom-control-label" for="OneYearsOld">
+																	<p>One Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">One Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Two Years Old" value="Two Years Old" class="custom-control-input" id="TwoYearsOld">
+																<label class="custom-control-label" for="TwoYearsOld">
+																	<p>Two Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Two Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Three Years Old" value="Three Years Old" class="custom-control-input" id="ThreeYearsOld">
+																<label class="custom-control-label" for="ThreeYearsOld">
+																	<p>Three Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Three Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Four Years Old" value="Four Years Old" class="custom-control-input" id="FourYearsOld">
+																<label class="custom-control-label" for="FourYearsOld">
+																	<p>Four Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Four Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Five Years Old" value="Five Years Old" class="custom-control-input" id="FiveYearsOld">
+																<label class="custom-control-label" for="FiveYearsOld">
+																	<p>Five Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Five Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Six Years Old" value="Six Years Old" class="custom-control-input" id="SixYearsOld">
+																<label class="custom-control-label" for="SixYearsOld">
+																	<p>Six Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Six Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Seven Years Old" value="Seven Years Old" class="custom-control-input" id="SevenYearsOld">
+																<label class="custom-control-label" for="SevenYearsOld">
+																	<p>Seven Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Seven Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Eight Years Old" value="Eight Years Old" class="custom-control-input" id="EightYearsOld">
+																<label class="custom-control-label" for="EightYearsOld">
+																	<p>Eight Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Eight Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Nine Years Old" value="Nine Years Old" class="custom-control-input" id="NineYearsOld">
+																<label class="custom-control-label" for="NineYearsOld">
+																	<p>Nine Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Nine Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Ten Years Old" value="Ten Years Old" class="custom-control-input" id="TenYearsOld">
+																<label class="custom-control-label" for="TenYearsOld">
+																	<p>Ten Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Ten Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Eleven Years Old" value="Eleven Years Old" class="custom-control-input" id="ElevenYearsOld">
+																<label class="custom-control-label" for="ElevenYearsOld">
+																	<p>Eleven Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Eleven Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Twelve Years Old" value="Twelve Years Old" class="custom-control-input" id="TwelveYearsOld">
+																<label class="custom-control-label" for="TwelveYearsOld">
+																	<p>Twelve Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Twelve Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Thirteen Years Old" value="Thirteen Years Old" class="custom-control-input" id="ThirteenYearsOld">
+																<label class="custom-control-label" for="ThirteenYearsOld">
+																	<p>Thirteen Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Thirteen Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Fourteen Years Old" value="Fourteen Years Old" class="custom-control-input" id="FourteenYearsOld">
+																<label class="custom-control-label" for="FourteenYearsOld">
+																	<p>Fourteen Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Fourteen Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Fifteen Years Old" value="Fifteen Years Old" class="custom-control-input" id="FifteenYearsOld">
+																<label class="custom-control-label" for="FifteenYearsOld">
+																	<p>Fifteen Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Fifteen Years Old</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Sixteen Years Old" value="Sixteen Years Old" class="custom-control-input" id="SixteenYearsOld">
+																<label class="custom-control-label" for="SixteenYearsOld">
+																	<p>Sixteen Years Old&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Sixteen Years Old</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+										</div>
+										<div class='deleteOptions'>
+											<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+										</div>
+										<div class="endOptions">
+											<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+											<div class="orangeHover">
+												<div class="blockAcross">
+													<div class="vertical pl1 addRow" role="button" tabindex="0">
+														<i class="far fa-bars"></i>
+														<p class="evenSmaller">row</p>
+													</div>
+													<div class="vertical pl1 addColumn" role="button" tabindex="0">
+														<i class="fal fa-line-columns"></i>
+														<p class="evenSmaller">column</p>
+													</div>
+													<div class="vertical pl1 addLayer" role="button" tabindex="0">
+														<i class="fal fa-layer-group"></i>
+														<p class="evenSmaller">layer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-draggable="item" class="levels custom-control custom-checkbox">
+										<input type="checkbox" name="levels" data-level="Pomeranian" value="Pomeranian" class="custom-control-input" id="Pomeranian">
+										<label class="custom-control-label" for="Pomeranian">
+											<p class="blue">Pomeranian&nbsp;
+												<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+											</p>
+										</label>
+										<div class="collapse">
+											<div class="card card-body">
+												<div class="horizontal">
+													<p>Variable Name:</p>
+													<ul class="variableName">
+														<li name="variableName" data-variable="Dog Eye Color" value="Dog Eye Color" id="DogEyeColor">Dog Eye Color</li>
+													</ul>
+												</div>
+												<div class="horizontal">
+													<p>Categories:</p>
+													<ul class="categories">
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Brown" value="Brown" class="custom-control-input" id="Brown">
+																<label class="custom-control-label" for="Brown">
+																	<p>Brown&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Brown</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Hazel" value="Hazel" class="custom-control-input" id="Hazel">
+																<label class="custom-control-label" for="Hazel">
+																	<p>Hazel&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Hazel</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Green" value="Green" class="custom-control-input" id="Green">
+																<label class="custom-control-label" for="Green">
+																	<p>Green&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Green</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Blue" value="Blue" class="custom-control-input" id="Blue">
+																<label class="custom-control-label" for="Blue">
+																	<p>Blue&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Blue</p>
+														</li>
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Amber" value="Amber" class="custom-control-input" id="Amber">
+																<label class="custom-control-label" for="Amber">
+																	<p>Amber&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Amber</p>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+											<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+										</div>
+										<div class='deleteOptions'>
+											<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+										</div>
+										<div class="endOptions">
+											<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+											<div class="orangeHover">
+												<div class="blockAcross">
+													<div class="vertical pl1 addRow" role="button" tabindex="0">
+														<i class="far fa-bars"></i>
+														<p class="evenSmaller">row</p>
+													</div>
+													<div class="vertical pl1 addColumn" role="button" tabindex="0">
+														<i class="fal fa-line-columns"></i>
+														<p class="evenSmaller">column</p>
+													</div>
+													<div class="vertical pl1 addLayer" role="button" tabindex="0">
+														<i class="fal fa-layer-group"></i>
+														<p class="evenSmaller">layer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div data-draggable="item" class="levels custom-control custom-checkbox">
+										<input type="checkbox" name="levels" data-level="German Shepherd" value="German Shepherd" class="custom-control-input" id="GermanShepherd">
+										<label class="custom-control-label" for="GermanShepherd">
+											<p class="blue">German Shepherd&nbsp;
+												<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+											</p>
+										</label>
+										<div class="collapse">
+											<div class="card card-body">
+												<div class="horizontal">
+													<p>Variable Name:</p>
+													<ul class="variableName">
+														<li name="variableName" data-variable="Dog Weight" value="Dog Smell" id="DogWeight">Dog Weight</li>
+													</ul>
+												</div>
+												<div class="horizontal">
+													<p>Categories:</p>
+													<ul class="categories">
+														<li>
+															<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																<i class="fal fa-ellipsis-v reorderSort"></i>
+																<input type="checkbox" name="categories" data-category="Underweight" value="Underweight" class="custom-control-input" id="Underweight">
+																<label class="custom-control-label" for="Underweight">
+																	<p>Underweight&nbsp;
+																	</p>
+																</label>
+																<div class="reorderOptions">
+																	<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																	<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																	<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																	<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																</div>
+															</div><p class="hideInModal">Underweight</p></li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Average" value="Average" class="custom-control-input" id="Average">
+																	<label class="custom-control-label" for="Average">
+																		<p>Average&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Average</p></li>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Overweight" value="Overweight" class="custom-control-input" id="Overweight">
+																	<label class="custom-control-label" for="Overweight">
+																		<p>Overweight&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Overweight</p></li>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+											</div>
+											<div class='deleteOptions'>
+												<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+											</div>
+											<div class="endOptions">
+												<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+												<div class="orangeHover">
+													<div class="blockAcross">
+														<div class="vertical pl1 addRow" role="button" tabindex="0">
+															<i class="far fa-bars"></i>
+															<p class="evenSmaller">row</p>
+														</div>
+														<div class="vertical pl1 addColumn" role="button" tabindex="0">
+															<i class="fal fa-line-columns"></i>
+															<p class="evenSmaller">column</p>
+														</div>
+														<div class="vertical pl1 addLayer" role="button" tabindex="0">
+															<i class="fal fa-layer-group"></i>
+															<p class="evenSmaller">layer</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div data-draggable="item" class="levels custom-control custom-checkbox">
+											<input type="checkbox" name="levels" data-level="Chihuahua" value="Chihuahua" class="custom-control-input" id="Chihuahua">
+											<label class="custom-control-label" for="Chihuahua">
+												<p class="blue">Chihuahua&nbsp;
+													<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+												</p>
+											</label>
+											<div class="collapse">
+												<div class="card card-body">
+													<div class="horizontal">
+														<p>Variable Name:</p>
+														<ul class="variableName">
+															<li name="variableName" data-variable="Dog Bark" value="Dog Bark" id="DogBark">Dog Bark</li>
+														</ul>
+													</div>
+													<div class="horizontal">
+														<p>Categories:</p>
+														<ul class="categories">
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Barks Seldom" value="Barks Seldom" class="custom-control-input" id="BarksSeldom">
+																	<label class="custom-control-label" for="BarksSeldom">
+																		<p>Barks Seldom&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Barks Seldom</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Barks Sometimes" value="Barks Sometimes" class="custom-control-input" id="BarksSometimes">
+																	<label class="custom-control-label" for="BarksSometimes">
+																		<p>Barks Sometimes&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Barks Sometimes</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Barks Frequently" value="Barks Frequently" class="custom-control-input" id="BarksFrequently">
+																	<label class="custom-control-label" for="BarksFrequently">
+																		<p>Barks Frequently&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Barks Frequently</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+											</div>
+											<div class='deleteOptions'>
+												<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+											</div>
+
+											<div class="endOptions">
+												<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+												<div class="orangeHover">
+													<div class="blockAcross">
+														<div class="vertical pl1 addRow" role="button" tabindex="0">
+															<i class="far fa-bars"></i>
+															<p class="evenSmaller">row</p>
+														</div>
+														<div class="vertical pl1 addColumn" role="button" tabindex="0">
+															<i class="fal fa-line-columns"></i>
+															<p class="evenSmaller">column</p>
+														</div>
+														<div class="vertical pl1 addLayer" role="button" tabindex="0">
+															<i class="fal fa-layer-group"></i>
+															<p class="evenSmaller">layer</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div data-draggable="item" class="levels custom-control custom-checkbox">
+											<input type="checkbox" name="levels" data-level="Greyhound" value="Greyhound" class="custom-control-input" id="Greyhound">
+											<label class="custom-control-label" for="Greyhound">
+												<p class="blue">Greyhound&nbsp;
+													<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+												</p>
+											</label>
+											<div class="collapse">
+												<div class="card card-body">
+													<div class="horizontal">
+														<p>Variable Name:</p>
+														<ul class="variableName">
+															<li name="variableName" data-variable="Dog Breath" value="Dog Breath" id="DogBreath">Dog Breath</li>
+														</ul>
+													</div>
+													<div class="horizontal">
+														<p>Categories:</p>
+														<ul class="categories">
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Bad Breath" value="Bad Breath" class="custom-control-input" id="BadBreath">
+																	<label class="custom-control-label" for="BadBreath">
+																		<p>Bad Breath&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Bad Breath</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Average Breath" value="Average Breath" class="custom-control-input" id="AverageBreath">
+																	<label class="custom-control-label" for="AverageBreath">
+																		<p>Average Breath&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Average Breath</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Good Breath" value="Good Breath" class="custom-control-input" id="GoodBreath">
+																	<label class="custom-control-label" for="GoodBreath">
+																		<p>Good Breath&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div><p class="hideInModal">Good Breath</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+											</div>
+											<div class='deleteOptions'>
+												<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+											</div>
+
+											<div class="endOptions">
+												<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+												<div class="orangeHover">
+													<div class="blockAcross">
+														<div class="vertical pl1 addRow" role="button" tabindex="0">
+															<i class="far fa-bars"></i>
+															<p class="evenSmaller">row</p>
+														</div>
+														<div class="vertical pl1 addColumn" role="button" tabindex="0">
+															<i class="fal fa-line-columns"></i>
+															<p class="evenSmaller">column</p>
+														</div>
+														<div class="vertical pl1 addLayer" role="button" tabindex="0">
+															<i class="fal fa-layer-group"></i>
+															<p class="evenSmaller">layer</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+									</form>
+
+								</div>
+
+								<div class="listArea2">
+									<div class="selectedLevels">
+										<p class="blue">Level <span class="levelTopicListNumber"></span> Topic List Area <span class="levelTopicAreaNumber"> </span></p>
+										<button type="button" class="close closeLevels" aria-label="Close" tabindex="0">
+											<i class="fal fa-minus"></i>
+										</button>
+									</div>
+
+									<form method="post" class="topicLevels" data-draggable="target2">
+										<div class="allLevels custom-control custom-checkbox">
+											<!-- <input type="checkbox" name="allLevels" class="custom-control-input" id="allLevels2">
+											<label class="custom-control-label" for="allLevels2"><p class="blue">ALL</p></label>
+											<span class="plusRow"><i class="fas fa-plus"></i>&nbsp;as&nbsp;<button type="button" class="btn btn-success">
+											row&nbsp;<i class="fal fa-bars"></i></button></span></span> -->
+										</div>
+										<div data-draggable="item" class="levels custom-control custom-checkbox">
+											<input type="checkbox" name="levels" data-level="Persian Cat" value="Persian Cat" class="custom-control-input" id="PersianCat">
+											<label class="custom-control-label" for="PersianCat">
+												<p class="blue">Persian Cat&nbsp;
+													<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+												</p>
+											</label>
+											<div class="collapse">
+												<div class="card card-body">
+													<div class="horizontal">
+														<p>Variable Name:</p>
+														<ul class="variableName">
+															<li name="variableName" data-variable="Cat Size" value="Cat Size" id="CatSize">Cat Size</li>
+														</ul>
+													</div>
+													<div class="horizontal">
+														<p>Categories:</p>
+														<ul class="categories">
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Small Cat" value="Small Cat" class="custom-control-input" id="SmallCat">
+																	<label class="custom-control-label" for="SmallCat">
+																		<p>Small Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Small Cat</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Medium Cat" value="Medium Cat" class="custom-control-input" id="MediumCat">
+																	<label class="custom-control-label" for="MediumCat">
+																		<p>Medium Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Medium Cat</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Large Cat" value="Large Cat" class="custom-control-input" id="LargeCat">
+																	<label class="custom-control-label" for="LargeCat">
+																		<p>Large Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Large Cat</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+											</div>
+											<div class='deleteOptions'>
+												<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+											</div>
+											<div class="endOptions">
+												<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+												<div class="orangeHover">
+													<div class="blockAcross">
+
+														<div class="vertical pl1 addAnalysis" role="button" tabindex="0">
+															<i class="fal fa-analytics"></i>
+															<p class="evenSmaller">Analysis</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-draggable="item" class="levels custom-control custom-checkbox">
+											<input type="checkbox" name="levels" data-level="Siamese" value="Siamese" class="custom-control-input" id="Siamese">
+											<label class="custom-control-label" for="Siamese">
+												<p class="blue">Siamese&nbsp;
+													<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+												</p>
+											</label>
+											<div class="collapse">
+												<div class="card card-body">
+													<div class="horizontal">
+														<p>Variable Name:</p>
+														<ul class="variableName">
+															<li name="variableName" data-variable="Cat Color" value="Cat Color" id="CatColor">Cat Color</li>
+														</ul>
+													</div>
+													<div class="horizontal">
+														<p>Categories:</p>
+														<ul class="categories">
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Black Cat" value="Black Cat" class="custom-control-input" id="BlackCat">
+																	<label class="custom-control-label" for="BlackCat">
+																		<p>Black Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Black Cat</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="White Cat" value="White Cat" class="custom-control-input" id="WhiteCat">
+																	<label class="custom-control-label" for="WhiteCat">
+																		<p>White Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">White Cat</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Grey Cat" value="Grey Cat" class="custom-control-input" id="GreyCat">
+																	<label class="custom-control-label" for="GreyCat">
+																		<p>Grey Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Grey Cat</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+											</div>
+											<div class='deleteOptions'>
+												<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+											</div>
+											<div class="endOptions">
+												<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+												<div class="orangeHover">
+													<div class="blockAcross">
+														<div class="vertical pl1 addAnalysis" role="button" tabindex="0">
+															<i class="fal fa-analytics"></i>
+															<p class="evenSmaller">Analysis</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div data-draggable="item" class="levels custom-control custom-checkbox">
+											<input type="checkbox" name="levels" data-level="Bengal" value="Bengal" class="custom-control-input" id="Bengal">
+											<label class="custom-control-label" for="Bengal">
+												<p class="blue">Bengal&nbsp;
+													<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+												</p>
+											</label>
+											<div class="collapse">
+												<div class="card card-body">
+													<div class="horizontal">
+														<p>Variable Name:</p>
+														<ul class="variableName">
+															<li name="variableName" data-variable="Cat Smell" value="Cat Smell" id="CatSmell">Cat Smell</li>
+														</ul>
+													</div>
+													<div class="horizontal">
+														<p>Categories:</p>
+														<ul class="categories">
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Stinky Cat" value="Stinky Cat" class="custom-control-input" id="StinkyCat">
+																	<label class="custom-control-label" for="StinkyCat">
+																		<p>Stinky Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Stinky Cat</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Aromatic Cat" value="Aromatic Cat" class="custom-control-input" id="AromaticCat">
+																	<label class="custom-control-label" for="AromaticCat">
+																		<p>Aromatic Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Aromatic Cat</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+											</div>
+											<div class='deleteOptions'>
+												<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+											</div>
+											<div class="endOptions">
+												<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+												<div class="orangeHover">
+													<div class="blockAcross">
+														<div class="vertical pl1 addAnalysis" role="button" tabindex="0">
+															<i class="fal fa-analytics"></i>
+															<p class="evenSmaller">Analysis</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div data-draggable="item" class="levels custom-control custom-checkbox">
+											<input type="checkbox" name="levels" data-level="Ragdoll" value="Ragdoll" class="custom-control-input" id="Ragdoll">
+											<label class="custom-control-label" for="Ragdoll">
+												<p class="blue">Ragdoll&nbsp;
+													<a role="button" tabindex="0" class="accordion-toggle" data-toggle="collapse" role="button" aria-expanded="false"><span><i class="fas fa-info-circle"></i></span></a>
+												</p>
+											</label>
+											<div class="collapse">
+												<div class="card card-body">
+													<div class="horizontal">
+														<p>Variable Name:</p>
+														<ul class="variableName">
+															<li name="variableName" data-variable="Cat Hair" value="Cat Hair" id="CatHair">Cat Hair</li>
+														</ul>
+													</div>
+													<div class="horizontal">
+														<p>Categories:</p>
+														<ul class="categories">
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Short Hair" value="Short Hair" class="custom-control-input" id="ShortHair">
+																	<label class="custom-control-label" for="ShortHair">
+																		<p>Aromatic Cat&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Short Hair</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Average Hair" value="Average Hair" class="custom-control-input" id="AverageHair">
+																	<label class="custom-control-label" for="AverageHair">
+																		<p>Average Hair&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Average Hair</p>
+															</li>
+															<li>
+																<div data-draggable="item" class="hidden custom-control custom-checkbox" draggable="true">
+																	<i class="fal fa-ellipsis-v reorderSort"></i>
+																	<input type="checkbox" name="categories" data-category="Long Hair" value="Long Hair" class="custom-control-input" id="LongHair">
+																	<label class="custom-control-label" for="LongHair">
+																		<p>Average Hair&nbsp;
+																		</p>
+																	</label>
+																	<div class="reorderOptions">
+																		<i class="fal fa-angle-up moveUp" tabindex="0" role="button"></i>
+																		<i class="fal fa-angle-down moveDown" tabindex="0" role="button"></i>
+																		<div class="straight"><i class="fal fa-angle-double-up top" tabindex="0" role="button"></i><p>top</p></div>
+																		<div class="straight"><i class="fal fa-angle-double-down bottom" tabindex="0" role="button"></i><p>last</p></div>
+																	</div>
+																</div>
+																<p class="hideInModal">Long Hair</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="closeToggle"><p class="orange smallest" tabindex="0" role="button">see less&nbsp;<i class="fal fa-angle-up"></i></p></div>
+											</div>
+											<div class='deleteOptions'>
+												<i class='fal fa-sort-alt categoriesModal' role='button' tabindex='0'></i>&nbsp;&nbsp;<i class='fal fa-trash-alt removeLevel' role='button' tabindex='0'></i>
+											</div>
+
+											<div class="endOptions">
+												<p class="text-center mostSmall"><i class="fas fa-plus"></i>&nbsp;ADD AS</p>
+												<div class="orangeHover">
+													<div class="blockAcross">
+														<div class="vertical pl1 addAnalysis" role="button" tabindex="0">
+															<i class="fal fa-analytics"></i>
+															<p class="evenSmaller">Analysis</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="option" data-type="stats">
+						<p class="small text-center">Options Row Percentage, Column Percentage, and Statistical Tests are only available if more than one topic has been selected and will not be available forselection if your query has only one topic.</p>
+
+						<div class="row">
+
+							<div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-xs-12">
+								<div class="whiteBubble">
+									<fieldset>
+										<legend class="blue text-left">Cell Estimates&nbsp;
+											<i class="fas fa-info-circle orange" data-toggle="tooltip" data-container="body" data-placement="right" data-html="true" title="<p class='smallest'>Basic Estimates</p><p class='smallest'>Frequency. The weighted count of the number of times a particular response (or responses) was given to a survey question (i.e., the sum of the weights for persons for whom that response was given). A frequency can be provided for a cell, row, column, layer, or marginal of a table.</p><p class='smallest'>Cell percentage. The weighted number of persons counted in a particular cell of a table divided by the weighted number of persons counted in the entire table (i.e., the sum of weights for persons in the cell divided by the sum of weights for all persons in the table).</p><p class='smallest'>Row percentage. The weighted number of persons counted in a particular cell of a table divided by the weighted number of persons counted in that cell’s row ( i.e., the sum of weights for persons in the cell divided by the sum of weights for all persons in that row).</p><p class='smallest'>Column percentage. The weighted number of persons counted in a particular cell of a table relative to the weighted number of person counted in that cell’s column (i.e., the sum of weights for persons in the cell divided by the sum of weights for all persons in that column).</p><p class='smallest'>Statistics of Another Variable</p><p class='smallest'>Mean. A weighted average, i.e., the sum of a set of weighted values divided by the sum of the weights.</p><p class='smallest'>Median. The value found at the exact middle of the set of all values in ranked order.</p><p class='smallest'>Total. The sum of a set of weighted values.</p><p class='smallest'>P-th Percentile. The value of a variable such that a percentage p of the weighted distribution’s observed (or theoretical) outcomes are less than or equal to that value. Similarly, the q quantile is the value of a variable such that a proportion q of the weighted distribution’s observed (or theoretical) outcomes are less than or equal to that value. Thus, the q quantile is the 100q-th percentile. Example: The median is the 0.5 quantile and the 50th percentile of a distribution.</p><p class='smallest'></p><p class='smallest'>Ratio. The weighted value of one variable divided by the weighted value of another variable.</p>"></i>
+										</legend>
+										<div class="wrapper">
+											<input id="BasicEstimates" name="BasicEstimates" type="radio" value="no-issues">
+											<label for="BasicEstimates" class="blue">Basic Estimates</label>
+										</div>
+
+										<p class="smallest">(check all that apply)</p>
+										<ul class="statistical-estimates">
+
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" name="cell-estimates" data-cell="Frequency" value="Frequency" class="custom-control-input" id="Frequency">
+												<label class="custom-control-label" for="Frequency">Frequency</label>
+											</li>
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" name="cell-estimates" data-cell="Cell Percentage" value="Cell Percentage" class="custom-control-input" id="CellPercentage">
+												<label class="custom-control-label" for="CellPercentage">Cell Percentage</label>
+											</li>
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" name="cell-estimates" data-cell="Row Percentage" value="Row Percentage" class="custom-control-input" id="RowPercentage">
+												<label class="custom-control-label" for="RowPercentage">Row Percentage</label>
+											</li>
+
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" name="cell-estimates" data-cell="Column Percentage" value="Column Percentage" class="custom-control-input" id="ColumnPercentage">
+												<label class="custom-control-label" for="ColumnPercentage">Column Percentage</label>
+											</li>
+
+										</ul>
+
+										<div class="wrapper">
+											<input id="statAnalysis" name="stat-analysis-title" type="radio" value="no-issues">
+											<label for="statAnalysis" class="blue">Statistics of Another Variable(s)</label>
+										</div>
+										<ul class="statistical-estimates">
+
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" value="Mean" id="mean" name="stat-analysis" class="custom-control-input" data-stat="Mean">
+												<label class="custom-control-label" for="mean">Mean</label>
+											</li>
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" value="Total" id="total" name="stat-analysis" class="custom-control-input" data-stat="Total">
+												<label class="custom-control-label" for="total">Total</label>
+											</li>
+
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" id="median" name="stat-analysis" value="Median" class="custom-control-input" data-stat="Median">
+												<label class="custom-control-label" for="median">Median</label>
+											</li>
+
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" id="percentile" name="stat-analysis" value="Percentile" class="custom-control-input" data-stat="">
+												<label class="custom-control-label" for="percentile">Percentile</label>
+												<input type="text" class="percentile-text" name="stat-analyis" value="" placeholder="1-99%"><i class="fal fa-plus addPercentage" role="button" tabindex="0"></i>
+												<div class="col-lg-9 col-md-12 col-sm-12">
+													<div class="btn-group btn-group-toggle" data-toggle="buttons">
+														<label class="btn btn-secondary">
+															<input type="radio" name="options" id="fivePercent" autocomplete="off">5%
+														</label>
+														<label class="btn btn-secondary">
+															<input type="radio" name="options" id="tenPercent" autocomplete="off">10%
+														</label>
+														<label class="btn btn-secondary">
+															<input type="radio" name="options" id="fiftyPercent" autocomplete="off">50%
+														</label>
+														<label class="btn btn-secondary">
+															<input type="radio" name="options" id="ninetyPercent" autocomplete="off">90%
+														</label>
+													</div>
+
+												</div>
+											</li>
+
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" id="ratio" name="stat-analysis" value="Ratio" class="custom-control-input">
+												<label class="custom-control-label" for="ratio">Ratio</label>
+
+											</li>
+
+										</ul>
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-xs-12">
+								<div class="whiteBubble text-left">
+									<fieldset>
+										<legend class="blue">Missing Values&nbsp;<i class="fas fa-info-circle orange" data-toggle="tooltip" data-container="body" data-placement="right" data-html="true" title="<p class='smallest'>Missing Values. Indicate whether to include missing values in your query results.</p>"></i></legend>
+										<ul class="missing">
+											<li class="wrapper">
+												<input id="yes" name="missing" type="radio" value="no-issues">
+												<label for="yes" class="blue">Yes</label>
+											</li>
+											<li class="wrapper">
+												<input id="no" name="missing" type="radio" value="no-issues">
+												<label for="no" class="blue">No</label>
+											</li>
+										</ul>
+
+										<legend class="blue text-left">Precision Measures&nbsp;<i class="fas fa-info-circle orange" data-toggle="tooltip" data-container="body" data-placement="right" data-html="true" title="<p class='smallest'>Confidence Interval. The confidence interval is a range of values (displayed as a lower and upper bound) that, with a specified level of confidence, contains an unknown true population value of the parameter of interest. The confidence level determines the percentage of the time, on average, that the true value of the parameter will be contained in the interval. The higher the confidence level, the wider the interval. For confidence intervals relating to cell, row or column percentages, the Wilson Interval is used. For all others, the standard interval (Wald) is used.</p><p class='smallest'>Standard Error. The standard error is a measure of the error in an estimate due to random variation inherent in the sample. It is an estimate of the extent to which a statistic calculated from a sample differs from the corresponding unknown population value. The smaller the standard error, the better the sample statistic is as an estimate of the population characteristic. When the associated estimate is a percentage, the standard error is expressed as a percentage.</p><p class='smallest'>Relative Standard Error (RSE). The relative standard error (also known as the coefficient of variation) is a measure of the error in an estimate relative to the estimate itself. It is computed as the estimate’s standard error divided by the estimate, expressed as a percentage. A lower relative standard error indicates a more precise measurement.</p>"></i>
+										</legend>
+
+										<p class="smallest">(check all that apply)</p>
+										<ul class="statistical-estimates">
+
+											<li class="statistical-estimates custom-control custom-checkbox">
+												<input type="checkbox" name="precision" value="Confidence Interval" class="custom-control-input" id="Confidence">
+												<label class="custom-control-label" for="Confidence">Confidence Interval</label>
+												<!-- <ul class="precision custom-control-inline">
+
+												<li class="approach wrapper">
+												<input id="standard" name="approach" type="radio" value="Standard">
+												<label for="standard" class="blue">Standard</label>
+											</li>
+											<li class="wrapper">
+											<input id="wilson" name="approach" type="radio" value="Wilson">
+											<label for="wilson" class="blue">Wilson</label>
+										</li>
+									</ul> -->
+									<ul class="precision custom-control-inline">
+										<li class="wrapper">
+											<input id="90%" name="confidence" type="radio" value="90%">
+											<label for="90%" class="blue">90%</label>
+										</li>
+										<li class="wrapper">
+											<input id="95%" name="confidence" type="radio" value="95%">
+											<label for="95%" class="blue">95%</label>
+										</li>
+										<li class="wrapper">
+											<input id="99%" name="confidence" type="radio" value="99%">
+											<label for="99%" class="blue">99%</label>
+										</li>
+									</ul>
+								</li>
+								<li class="statistical-estimates custom-control custom-checkbox">
+									<input type="checkbox" name="precision" value="Standard Error" class="custom-control-input" id="StandardError">
+									<label class="custom-control-label" for="StandardError">Standard Error</label>
+								</li>
+								<li class="statistical-estimates custom-control custom-checkbox">
+									<input type="checkbox" name="precision" value="Relative Standard Error" class="custom-control-input" id="RelativeStandardError">
+									<label class="custom-control-label" for="RelativeStandardError">Relative Standard Error (RSE)</label>
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-xs-12">
+					<div class="whiteBubble text-left">
+						<legend class="blue">Statistical Tests&nbsp;<i class="fas fa-info-circle orange" data-toggle="tooltip" data-container="body" data-placement="right" data-html="true" title="<p class='smallest'>Chi-Square. Chi-square tests are used to determine if a distribution of observed frequencies differs significantly from what would be expected by chance. In a two-way table, for example, the chi-square test tests whether the row and column variables are independent. The larger the chi-square statistic, the more likely it is that the row and column variables are related to one another. The RS2 approach computes the Rao-Scott statistic using a design effect adjustment to the Pearson chi-square, and the RS3 approach computes the Rao-Scott statistic using the Satterthwaite adjustment.</p><p class='smallest'>t-test. t-tests are used to determine whether the difference between two estimates is what would be expected by chance. The larger the absolute value of the t-statistic, the more likely it is that the difference is significant. t-tests are available in 1-way or 2-way tables to test the difference between two means, cell percentages, row percentages and column percentages. To specify a t-test, only one specific type of estimate (mean, row percentage, etc.) can be specified at a time</p>"></i></legend>
+						<p class="smallest">(check all that apply)</p>
+						<ul class="statistical-estimates borderBottomBlue">
+
+							<li class="statistical-estimates custom-control custom-checkbox">
+								<input type="checkbox" name="chi" value="Chi-Square" class="custom-control-input" id="Chi-Square">
+								<label class="custom-control-label" for="Chi-Square">Chi-Square (RS3)</label>
+							</li>
+							<li class="statistical-estimates custom-control custom-checkbox">
+								<input type="button" data-toggle="modal" data-target="#addTtest" id="tTest" type="checkbox" class="addTest custom-control-input" id="Chi-Square">
+								<label class="custom-control-label" for="tTest">Add a t-test</label>
+							</li>
+							<br>
+						</ul>
+						<!-- <div type="button" data-toggle="modal" data-target="#addTtest" class="orangeBubble d-flex justify-content-center align-items-center addTest"><i class="far fa-plus"></i>&nbsp;Add a t-test</div> -->
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+		<div class="option" data-type="data">
+
+			<p>SUBSET DATA</p>
+
+		</div>
+
+
+
+
+	</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="reorderCategories" tabindex="-1" role="dialog" aria-labelledby="reorderCategories" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-center">Combine/Reorder Categories</h5>
+				<button type="button" class="close closeCategoryModal" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<p class="text-center mostSmall">&ndash;SELECT TOPICS TO MOVE IN DESIRED ORDER&ndash;</p>
+				<button type="button" class="btn btn-success combine" role="button" tabindex="0">
+					<p class="groupTopics smallest">Select to group</p>&nbsp;
+					<div class="across3"><i class="fal fa-angle-right"></i><i class="fal fa-arrow-right"></i></div>
+				</button>
+			</div>
+			<div class="modal-body addCategories" data-draggable="target">
+
+
+			</div>
+			<div class="groupedCategories">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary save"><i class="fal fa-save"></i>&nbsp;Save</button>
+				<a href=""><p class="orange"><i class="fal fa-history"></i>&nbsp;Reset</p></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-lg-4 col-xl-3 col-md-12 append changeBreakpoint">
+	<div class="appendActions">
+		<div class="vertical"><i class="fas fa-star blue" tabindex="0" role="button"></i><p class="blue evenSmaller">see Saved</p></div>
+		<div class="across2"><p class="blue">Query Summary</p><div class="orangeCircle" tabindex="0" role="button"><i class="far fa-expand-alt"></i></div></div>
+		<div><p class="orange smallest"><i class="fal fa-undo" tabindex="0" role="button"></i>&nbsp;Clear</p></div>
+	</div>
+	<div class="appendOptions">
+
+
+		<div class="lightBlueBack">
+
+			<ul class="filter-attr-list">
+				<!-- <p class="saveYear">Year(s)*</p> -->
+
+
+			</ul>
+
+		</div>
+		<!-- <p class="text-center mostSmall">&ndash;SELECT TOPICS&ndash;</p> -->
+
+		<div class="topics">
+
+			<div class="container">
+				<div class="whiteLayer"></div>
+				<div class="row">
+					<p><i class="far fa-bars"></i>&nbsp;Row Topic&nbsp;<i class="fal fa-info-circle"></i> <span class="evenSmaller">no limit</span></p>
+					<div id="rowTopic" data-draggable="target">
+
+						<div class="whiteBar">
+							<i class="fas fa-circle"><h6 class="numberCounter">0</h6></i>
+
+							<p class="text-center mostSmall">hover to see all</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="columnTopic" data-draggable="target">
+						<p>
+							<i class="fal fa-line-columns"></i>&nbsp;Column Topic&nbsp;<i class="fal fa-info-circle"></i>
+							<span class="evenSmaller">limit 1</span>
+						</p>
+					</div>
+				</div>
+				<div id="layerTopic" class="row" data-draggable="target">
+					<p><i class="fal fa-layer-group"></i></i>&nbsp;Layer Topic&nbsp;<i class="fal fa-info-circle"></i> <span class="evenSmaller">limit 1</span></p>
+				</div>
+
+
+			</div>
+
+		</div>
+
+
+		<!-- <div class="whiteLayer"> -->
+		<div class="analysis-topic">
+
+			<div class="container">
+					<div class="whiteLayer"></div>
+				<div class="row" id="analysisTopic" data-draggable="target2">
+					<p><i class="fal fa-chart-bar"></i>&nbsp;Analysis Topic&nbsp;<i class="fal fa-info-circle"></i> <span class="evenSmaller">limit 1</span></p>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+
+		<!-- <div class="whiteLayer"> -->
+		<div class="stats">
+
+			<div class="container">
+							<div class="whiteLayer"></div>
+				<div class="row">
+					<p>Statistical Output</p>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+
+
+		<p class="text-center mostSmall">OPTIONAL FILTERS</p>
+
+		<!-- <div class="whiteLayer"> -->
+		<div class="data">
+
+			<div class="container">
+					<div class="whiteLayer"></div>
+				<div class="row">
+					<p>Subset Data</p>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+
+		<!-- <div class="whiteLayer"> -->
+		<!-- <div class="benchmarks">
+		<div class="container">
+		<div class="row">
+		<p>Benchmarks</p>
+	</div>
+</div>
+</div> -->
+</div>
+
+
+<!-- </div> -->
+</div>
+</div>
+
+
+<div class="backdropShadow"></div>
+</div>
+
+<footer>
+	<div class="footer-wrapper">
+
+		<a href="https://www.westat.com" target="_blank" title="Visit website">
+			<img src="images/footer_westat_logo.svg" alt="Westat Home page" title="Westat" class="img-wes-logo"></a> <p class="p-wes-title t-white">An Employee-Owned Research Corporation<sup class="t-white">®</sup></p></div>
+		</footer>
+
+		<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+		<script
+		src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+		integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+		crossorigin="anonymous"></script>
+
+		<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="js/bootstrap.js"></script> -->
+
+
+
+		<script type="text/javascript" src="build/index.js"></script>
+
+
+	</body>
+	</html>

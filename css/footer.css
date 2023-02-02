@@ -1,0 +1,22 @@
+footer {
+    position: relative;
+    background: #1a2a57;
+    padding: 12px 0px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1.6rem;
+    flex-wrap: wrap;
+}
+
+.t-white {
+    color: #ffffff !important;
+    padding-top:20px;
+}
+
+.img-wes-logo {
+    height: 36px;
+}

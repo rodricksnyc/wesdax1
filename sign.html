@@ -1,0 +1,679 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>
+	WesDaX
+</title>
+
+<title>WesDaX - Online Analysis &amp; Reporting Platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<link rel="stylesheet" type="text/css" href="style.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style>
+
+        body{
+        margin: 0;
+        background: #fff;
+        font-size: 14px;
+        font-family: "Open Sans", Arial, Verdana, Trebuchet;
+        line-height: 21px;
+        color: #444;
+      }
+
+      a{
+          text-decoration: none;
+      }
+
+      p{
+          margin:0pt;
+      }
+
+      .sign-in-wrapper{
+        display: flex;
+        position: relative;
+        width: 96%;
+        padding: 52px 2% 24px;
+      }
+
+      .sign-in-area{
+        position: relative;
+        width: 32%;
+        padding: 0% 4%;
+        border-right: 1px solid #82A3BE;
+        font-size: 16px;
+      }
+
+      .sign-in-wrapper h3{
+        font-size: 20pt;
+        color: #07477D;
+        font-weight: 300;
+        margin: 4pt 0pt 12pt;
+      }
+
+      .explore-data{
+        position: relative;
+        width: 52%;
+        padding: 0% 4%;
+      }
+
+      .explore-data .focus-text{
+         font-size: 16px;
+         line-height: 24px;
+      }
+
+      .body-piece__link {
+        color: #C94726 !important ;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        font-weight: 300;
+      }
+
+      h3.body-piece__link{
+        display: inline-block;
+        padding-bottom: 2pt;
+        margin: 4pt 0pt 8pt;
+      }
+
+      .body-piece__link:hover, .body-piece__link:focus {
+        color: #00467F !important;
+        border-bottom: 1px solid  #00467F;
+      }
+
+      ._card{
+          padding: 18px 24px 24px;
+          margin: 24px 0px 36px;
+          box-shadow: 0px 0px 18px rgba(0,0,0,0.2);
+      }
+
+      input[type="text"], input[type="password"], input[type="email"], textarea, select {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            outline: none;
+            border-radius: 4px;
+            margin: 2px 0 8px;
+            max-width: 100%;
+            width: 50%;
+            display: block;
+            background: #fff;
+      }
+
+      input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+            border: 1px solid #aaa;
+            color: #444;
+            -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+            -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+            box-shadow: 0 0 3px rgba(0,0,0,.2);
+        }
+
+        .sign-in-area button.submit{
+            background-color: #C7482E;
+            color: #FFFFFF;
+            font-size: 11pt;
+            font-family: "Open Sans", Arial, Verdana, Trebuchet;
+            border: 0;
+            cursor: pointer;
+            padding: 4px 24px;
+            border-radius: 4px;
+            margin: 12px 0px 4px;
+        }
+
+        .sign-in-area button.submit:hover{
+            background-color: #00467F;
+        }
+
+        .sign-in-area a{
+            font-size: 14px;
+        }
+        #mainContent a:hover {
+            text-decoration: none;
+            color: #07477D;
+        }
+#w-content .page-title {
+    border-bottom: none;
+    display:none;
+}
+
+      </style>
+</head>
+
+<!-- if there is no left navigation add the class "no_left_nav" to the body tag
+      To remove the westat branding (logo) add the class "no-westat-logo" to the body tag
+  -->
+<body id="ctl00_body" class="w-sticky-head no_left_nav w-desktop">
+    <form name="aspnetForm" method="post" action="default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="9GNpNTRyOJ27DVmQxVU13tiofuyT87nIYBFdKrbjFud3TZf5UtZJbFr2JYQ7yovMqE+3ilIIQ56WhWF2kOU4C7kg9+qBi0X9T1dnuJ0Slj3fJqjL/RiR3BcVRGjEOMWhx9dYSTbkadWEFfvpUIeyQ9RDc5T9VK4HMXuFTbSr4Wnc8igAQygjXMjlqUF8D2yLphqiEBu+Z/6PAk7aFAZNbDd8eMzdy3r9x58MELUZc9hcin0aCCgHEedN9OQ77pR8IpQbBmC0Tn4ZQLZj6Qft6RqPl1jQfTqaieY6b7xfV4w6/0KTcgqIAVCqazdZY8dUSMY9+bl+LRpQHPx5A5LDMGQEG80Ewj/Fnj+yq6Bt8Vk=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=RdgXGQe2wr88ILZ7Tg-nUSy4mBCrhdaWF4oX-Q-Q4oGPAf4wHJrcUmw8FbxaPqb4GbPoZ0z0Dz-DTfCYd_Q5a94ivQ2yhChX6NlRuc0CHcA1&amp;t=636765280020000000" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=S6kwgR-TeKmEqorht9BUNhspCC-7APi2hZJ8u51qOPommcFP2LYLhQXrQIcLlzjnmkNZh0l5Kjckzaqh3sWVJKy_EaLASLH77f1IBl5VvWw1&amp;t=636765280020000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=UW_sWDk1FDx1b1mJK0TMDb-9EU1lRwVIl8Gx8c2SYKRy61YrCzwXrzDTnKgsh3syoh07WZhqiwVkKAVJ1_03_L1CeqQPb7hGcuGOJRd1ksE1&amp;t=636765280020000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="9XbxyHtuylGnpTr3NxLahhU8spvni//JGYLxwTb8mtPjQp2oW6xkPB5uv8gkYcGgDgvULD4VCi3IVoBxgC8Y42QuOzMD5/oNjdBXcGXTWv9oqYf5n9WUoxamQIM5XycRjdZhhGiBunU02BxXLsjFzS1G9vFKraGn3jsqCrvmJcuuvKml6zR3BYDoQWwCq2js">
+</div>
+        <div id="skip-link">
+            <a href="#w-content" class="element-invisible">Skip to main content</a>
+        </div>
+        <!-- Your content must be added inside a "region-inner" tag, wrapped in a ".block" div -->
+        <!-- The region will not display if it is empty. To hide not empty region add the class "ps-hide" to it -->
+        <div id="westat-wrapper">
+            <div id="w-page" class="w-container ps-basic">
+                <!-- Public Mode Changes remove class=region on header-->
+                <header id="w-header">
+                    <div class="region-inner clearfix">
+                        <div id="logo" class="block">
+                            <div class="block-inner">
+                                <div class="block-content">
+                                    <div id="w-header-wrapper">
+                                        <div id="w-header-left">
+                                        </div>
+                                        <div id="w-header-middle">
+
+                                                <div id="w-header-logo-container">
+                                                    <table role="presentation">
+                                                        <tbody><tr><td id="w-header-logo"><img src="../../Images/WesDaX_logo.svg" class="wesdaxlogo" alt="WesDax Logo"></td><td id="w-header-text">Westat's Online Analysis &amp; Reporting Platform</td></tr>
+                                                    </tbody></table>
+                                                </div>
+
+                                        </div>
+                                        <div id="w-header-right">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </header>
+
+                <!-- region navigation - generally used for top navigation -->
+                <section id="w-navigation" class="ps-menu-left">
+                    <div class="w-header-bottom">
+
+                        <nav id="top-navigation" class="block nine">
+                            <div class="block-inner">
+                                <div class="block-content w-nav"><div class="slicknav_menu"><a href="#" aria-haspopup="true" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" style="color: rgb(7, 71, 125); font-size: 11pt; font-family: &quot;Open Sans&quot;; margin-left: 80px; display: none;" aria-hidden="true" role="menu">
+                                            <li class="">
+                                                <a class="active" href="Default.aspx" role="menuitem" tabindex="-1">Home</a></li>
+
+                                                <li>
+                                                    <a href="Public/Contact.aspx" role="menuitem" tabindex="-1">Contact Us</a></li>
+
+                                            <li class="slicknav_txtnode">
+
+                                            </li>
+                                        </ul></div>
+
+                                        <ul class="menu horizontal" style="color: #07477D; font-size: 11pt; font-family: Open Sans; margin-left: 80px;">
+                                            <li class="">
+                                                <a id="ctl00_lnkTopHome" class="active" href="Default.aspx">Home</a></li>
+
+                                                <li>
+                                                    <a id="ctl00_lnkTopContact" href="Public/Contact.aspx">Contact Us</a></li>
+
+                                            <li>
+
+                                            </li>
+                                        </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+                </section>
+
+                <!-- region highlight - can be used for a homepage slideshow -->
+                <section id="w-highlight" class="region">
+                    <div class="region-inner clearfix">
+                        <div id="ProjectsMenu" class="block one">
+                            <div class="block-inner">
+                               <!-- <h2 class="block-title element-invisible">Projects Mobile Menu</h2>-->
+                                <div class="emptyblock"></div>
+                                <div class="block-content" style="float: right">
+                                    <a href="#" aria-haspopup="true" tabindex="0" class="projects_btn clearfix">
+                                        <span class="slicknav_menutxt">Projects</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- region content - used for the site main content -->
+                <section id="w-content" class="region leftnav_open">
+                    <div class="region-inner clearfix">
+
+                        <div id="left-navigation" class="block two">
+                            <div class="block-inner">
+                               <!-- <h2 class="block-title element-invisible">Left Navigation</h2>-->
+                                <div class="block-content ps-uniHeight" style="height: 923px;">
+
+
+        <div id="nav-side">
+
+
+
+    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="mainArea" class="block ten">
+                            <div class="block-inner">
+                                <div class="block-content ps-uniHeight" style="height: 923px;">
+
+                                    <div id="breadcrumb" class="block twelve">
+                                        <div class="block-inner">
+                                            <!--<h2 class="block-title element-invisible">Breadcrumb</h2>-->
+                                            <div class="block-content">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="mainContent" class="block twelve">
+                                        <div class="block-inner">
+                                            <h1 class="block-title page-title">
+
+    WesDaX
+
+                                            </h1>
+                                            <div class="block-content">
+
+
+
+    <div class="sign-in-wrapper">
+        <div class="sign-in-area">
+            <h3 class="_title">Sign in</h3>
+            <div class="login-area">
+            <div id="temp" class="sd-lCont sd-fll">
+              <table id="ctl00_ContentPlaceHolder1_LoginBox1_Login1" cellspacing="0" cellpadding="0" border="0" style="border-color:#FEFBE9;border-width:1px;border-style:Solid;border-collapse:collapse;">
+	<tbody><tr class="odd">
+		<td>
+    <div>
+      <label for="ctl00_ContentPlaceHolder1_LoginBox1_Login1_UserName" id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_Label1">Email:</label>
+	  <p>
+        <input name="ctl00$ContentPlaceHolder1$LoginBox1$Login1$UserName" type="text" id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_UserName" class="login" style="width:200px;"><span id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_UserNameRequired" title="Please enter your email address." class="err" style="color:Red;display:none;">&nbsp;*</span>
+      </p>
+	  <label for="ctl00_ContentPlaceHolder1_LoginBox1_Login1_Password" id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_Label2">Password:</label>
+	  <p><input name="ctl00$ContentPlaceHolder1$LoginBox1$Login1$Password" type="password" id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_Password" class="login" style="width:200px;"><span id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_PasswordRequired" title="Please enter your password." class="err" style="color:Red;display:none;">&nbsp;*</span>
+	  </p>
+      <div id="loginBt">
+      <input type="submit" name="ctl00$ContentPlaceHolder1$LoginBox1$Login1$LoginButton" value="Sign In" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$LoginBox1$Login1$LoginButton&quot;, &quot;&quot;, true, &quot;valgrpLogin&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_LoginButton" class="loginBt">
+      </div>
+      <div class="err">
+
+      </div>
+	  <a id="ctl00_ContentPlaceHolder1_LoginBox1_Login1_HyperLink4" href="ForgotPassword.aspx">Forgot your password?	 </a>
+	  </div>
+    </td>
+	</tr>
+</tbody></table>
+
+
+
+
+
+            </div>
+            </div>
+        </div>
+        <div class="explore-data">
+            <h3 class="_title">Explore the Data!</h3>
+            <p class="focus-text">Easy to deploy and navigate, WesDaX offers users an efficient and effective tool that
+                expands the utility of research. Join numerous other projects in getting the most out of your data
+                today! <a id="ctl00_ContentPlaceHolder1_HyperLink3" class="body-piece__link " href="index.html" target="_blank">Learn more about WesDaX.</a>
+            </p>
+            <div class="_card">
+                <h3 class="_title body-piece__link "><a id="ctl00_ContentPlaceHolder1_HyperLink5" href="publicaccess.aspx">Access Public Data</a></h3>
+                <p>
+                    Utilize public use data sets to gain valuable insights into the results of large national surveys. Analyze huge amounts of data to discover trends and other useful visualizations
+                    including the American Community Survey, Current Population Survey, and Common Core of Data. Sign
+                    in or <a id="ctl00_ContentPlaceHolder1_HyperLink1" class="body-piece__link " href="publicaccess.aspx">register</a>
+                    to access the data.
+                </p>
+            </div>
+            <div class="_card">
+                <h3 class="_title"><a id="ctl00_ContentPlaceHolder1_HyperLink6" class="body-piece__link " href="OpenDataset.ashx">Open Access Demo</a></h3>
+
+                 <p>
+                    Explore a sample of WesDaX's capabilities by using a subset of the variables from the Behavioral
+                    Risk Factor Surveillance System (BRFSS) public data. Delve into what WesDaX has to offer and
+                    conduct research on complex survey data from key national surveys and files.
+                    <a id="ctl00_ContentPlaceHolder1_HyperLink2" class="body-piece__link " href="OpenDataset.ashx">View demo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- region below the main content - can be used for extra blocks -->
+                <section id="w-content-bottom" class="region">
+                    <div class="region-inner clearfix">
+                    </div>
+                </section>
+
+
+                <!-- region footer - used for the site footer -->
+                <footer id="w-footer" class="region">
+                    <div class="clearfix" id="w-footer-wrapper">
+
+                        <div id="w-footer-left">
+                            <div id="w-footer-logo">
+                                <img src="../../Images/westat_logo_white.svg" alt="Westat Logo" class="westatlogo">
+                            </div>
+                        </div>
+                        <div id="w-footer-middle">
+                            <div id="w-footer-middle-text">
+                               <!-- <h2 class="block-title element-invisible">footer menu and address</h2>-->
+
+
+                                <div class="block-content">
+                                    <ul class="clearfix">
+                                        <li><a href="/Public/Accessibility.aspx" id="ctl00_lnkAccessibility">Accessibility</a></li>
+
+                                        <li><a href="/Public/Contact.aspx" id="ctl00_lnkContact">Contact Us</a></li>
+                                    </ul>
+
+                                    <p id="ctl00_WestatFooter">
+                                        1600 Research Boulevard, Rockville, MD, 20850 | 301-251-1500<br>
+                                        Westat, An Employee-Owned Research Corporation ®
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="w-footer-right">
+                            <div id="w-footer-right-text">
+                                <!--<h2 class="block-title element-invisible">copyright</h2>-->
+                                <div class="block-content">
+                                    <p>
+
+                                        Copyright © 2014 Westat, Inc. All Rights Reserved<br>
+                                        You'll need <a href="http://www.adobe.com/products/reader.html">Adobe Reader</a> to read PDF files on this site.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </footer>
+            </div>
+            <!-- w-page -->
+        </div>
+        <!-- w-wrapper -->
+
+				<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+			  <script type="text/javascript" src="menu.min.js"></script>
+			  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+			  <script type='text/javascript' src='js5/jquery.particleground.js'></script>
+			  <script type="text/javascript" src="script.min.js"></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        WebForm_AutoFocus('ctl00_ContentPlaceHolder1_LoginBox1_Login1_UserName');//]]>
+</script>
+</form>
+
+<script type="text/javascript">
+
+    var loadUrl = 'keepalive.aspx';
+    var ajax_load = "<img src='../images/img-loading.gif' alt='loading...' />";
+    var secExit = 0;
+    var timer;
+
+    $(document).ready(function() {
+        //alert("document ready");
+        //kick off the timer and load a server page
+        myKeepAlive();
+
+    });
+
+    function myKeepAlive() {
+        //the number of minutes before the session timeout
+        var minExit = 1;      //;
+        //the number of minutes the web page has been idled
+        var minWarn = 38;      //40 - minExit;
+        debugger;
+        //the url the user is redirected to when the session timeout happens
+        var exitURL = "default.aspx";
+        //alert('request initiated');
+        //load the server page in order to keep the session alive
+        $("#keepalive").empty().html(ajax_load).load(loadUrl);
+        //start a new timer in this function
+        timeOutWarning(0, minWarn, minExit, exitURL);
+
+    }
+function ShowDialog(warnMsg, timeouthandler) {
+
+    $("#dialog-confirm").dialog({
+        resizable: true,
+        autoOpen: false,
+        height: 310,
+        /*weight: 360,*/
+        modal: true,
+        buttons: {
+            "Need Extra Time":
+                function () {
+                    //stop the timer
+                    window.clearTimeout(timeouthandler);
+                    window.clearInterval(timer);
+                    myKeepAlive();
+                    $(this).dialog("close");
+                }
+
+
+//            Cancel: function () {
+//                //just close the dialog window
+//                $(this).dialog("close");
+//            }
+        }
+    });
+
+    $('#dialog-confirm').dialog('open');
+
+}
+
+function CloseDialog() {
+    $('#dialog-confirm').dialog('close');
+}
+
+function ajaxComplete() {
+
+ alert('request completed');
+
+}
+
+function timeOutWarning(mAction,minWarn,minExit,exitURL)
+{
+	// one second = 1000
+	var strCall;
+	var NewAction;
+
+	debugger;
+	NewAction = mAction + 1;
+
+	strCall = "timeOutWarning(" + NewAction + "," + minWarn + "," + minExit+ ",'" + exitURL + "')"
+
+	switch (mAction)
+	{
+		case 0: //initialize
+			window.setTimeout(strCall, minWarn * 60 * 1000);
+			break;
+
+        case 1: //warn
+            var mytimeout = window.setTimeout(function () { timeOutWarning(NewAction, minWarn, minExit, exitURL) }, minExit * 60 * 1000);
+
+            secExit = minExit * 60;
+            //alert("sec total in timeoutwarning: " + secExit);
+            $('#dialog-confirm p #minWarn').text(minWarn);
+            updateDialogtime(secExit)
+
+            var warnMsg = $('#dialog-confirm p').text();
+            ShowDialog(warnMsg, mytimeout);
+            //update the retaining minites and seconds in every second
+            timer = window.setInterval(function () { updateDialogtime() }, 1 * 1000);
+            break;
+
+        case 2: //timeout
+             $.ajax({
+                   type: "POST",
+                   url: "/api/Session",
+                   contentType: false,
+                   processData: false,
+                   data: "",
+                   contentType: "application/json; charset=utf-8",
+                   dataType: "json",
+                    success: function (msg) {
+                        //alert("data=" + msg.d);
+                        //alert("Successfully ended the user session!");
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        //404 : not found
+                         //401: not authorized
+                         //400: bad request
+                         //alert(textStatus);
+                         //alert(jqXHR.status);
+                    },
+                   complete: function(){
+                        //alert("Timeout!!!");
+                        clearInterval(timer);
+                        //FR call server to kill the session in case
+                        //EndSession();
+
+                        CloseDialog();
+                        window.location = "/" + exitURL;
+                        //document.location.href = exitURL;
+                   }
+                });
+
+
+	}
+}
+
+
+function updateDialogtime() {
+    secExit = secExit - 1;
+    //alert("sec total: " + secExit);
+    //var sec = parseInt(secExit);
+    var minLeft = padZero2(Math.floor(secExit / 60), 2);
+    //alert("min left: " + minLeft);
+    var secLeft = padZero2(secExit % 60, 2);
+    //alert("sec left:" + secLeft);
+    //replace the tokens in the warning message with actual minutes and seconds
+    $('#dialog-confirm p #minExit').text(minLeft);
+    $('#dialog-confirm p #secExit').text(secLeft);
+
+}
+
+function padZero(num, size) {
+    var s = num + "";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+function padZero2(num, size) {
+    var s = "00" + num;
+    return s.substr(s.length - size);
+return num;
+}
+
+$.ajaxSetup ({
+    cache: false
+});
+</script>
+<div id="dialog-confirm" title="Timeout warning" style="width:60%;display:none">
+	<p class="timeoutWarn">
+    Your session has been inactive for <span id="minWarn">minWarn</span> minutes.
+   Please select 'Need Extra Time' if you would like to continue working.  Otherwise you will be logged out and redirected to the home page in next <span id="minExit">minExit</span> minutes and <span id="secExit">secExit</span> seconds.
+    </p>
+</div>
+<div id="timeout_warning_feedback" style="display:none;">
+<input type="button" onclick="ShowDialog();" value="ShowDialog">
+<div id="keepalive"><img src="../images/img-loading.gif" alt="loading..."></div>
+<div>
+client cookie: .ASPXANONYMOUS=pZdzWCsH1gEkAAAAZmY3YjRhNTgtNDRhNC00NmU5LTlhNTEtYjJmMzMwOWEyYzkxr2ED7Qo6OHA3J7BFLHUx-HMyUgotcRGDSMDzQCixZAQ1; ASP.NET_SessionId=jvtoped2wuh4zxqg5njnujgj
+</div>
+</div>
+
+
+</body></html>

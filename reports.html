@@ -1,0 +1,995 @@
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<meta Content-type="text/plain" charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Westat's WesDaX</title>
+
+<link type="image/png" href="images/favicon.ico" rel="icon">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.3/dist/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="font-awesome-pro/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="font/css/all.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/footer.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+
+
+</head>
+
+
+<body>
+	<a href="#themaincontent" id="skiptocontent" tabindex="1" aria-hidden="false">skip to main content</a>
+	<div class="container-fluid reportView">
+
+		<div class="navigation-wrap bg-light start-header start-style">
+
+			<div class="row">
+				<div class="col-12">
+
+					<nav class="navbar navbar-expand-xl navbar-light">
+						<div class="navbar-collapse collapse order-1 order-md-0 dual-collapse2" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+
+								<li class="projects" tabindex="0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fal fa-angle-left"></i>
+									<i class="fas fa-circle"><p class="initials">PN</p></i>
+									<h3>Project Name</h3>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="index.html" tabindex="0">Welcome</a>
+									<i class="fal fa-door-open"></i>
+								</li>
+
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="view1.html" tabindex="0">Analysis</a>
+									<i class="fal fal fa-chart-bar"></i>
+								</li>
+
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="reports.html" tabindex="0">Reports</a>
+									<i class="fal fa-clipboard-list"></i>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+
+									<a class="nav-link" href="documents.html">Documents</a>
+									<i class="fal fa-file-alt"></i>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="about.html">About</a>
+									<i class="fal fa-info-circle"></i>
+								</li>
+							</ul>
+
+							<ul class="navbar-nav ml-auto nav-flex-icons">
+
+								<a class="navbar-brand" href="default.html" target="_blank">
+									<img src="images/logo.svg" alt="WesDax Logo">
+								</a>
+
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0" role="button">
+										<h6 class="user">{{USER}}</h6>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link signOut" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">
+										<i class="fal fa-sign-out-alt"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+					</nav>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="content-spacer"></div>
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+
+				<div id="slideOutLeft">
+					<div class="selectProject">&ndash; Select a Project &ndash;</div>
+
+					<div class="projects" aria-expanded="false" role="button" aria-hidden="false" tabindex="0">
+						<div class="across">
+							<i class="fas fa-circle"><p class="initials">PN</p></i><h3>Project Name</h3>
+
+						</div>
+						<div class="close-project" aria-expanded="false" role="button" aria-hidden="true" tabindex="-1">
+							<i class="fal fa-angle-double-left"></i>
+						</div>
+					</div>
+					<div id="accordion">
+						<div class="panel">
+							<div class="panel-header" id="acs">
+								<h5 class="mb-0">
+									<a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-hidden="true" tabindex="-1">
+										ACS-PUMS
+									</a>
+								</h5>
+							</div>
+							<div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="acs">
+								<div class="panel-body">
+									<div id="accordion-1" class="accordions">
+										<div class="card-body">
+											<h5>
+												<!--**Tsigereda, I am using the # instead of the path to the new screen view for demo purposes only- but I left the correct href below that is currently being used on the site to switch screen views -->
+
+												<a class="listOptions" href="index.html" title="ACS-PUMS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+												<!-- <a class="listOptions" href="RptList.aspx?ScreenID=15037" title="ACS-PUMS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+											</h5>
+										</div>
+
+										<div class="card-body">
+											<h5>
+
+												<a class="listOptions" href="about.html" title="ACS-PUMS – About" role="menuitem" tabindex="0">About</a>
+
+											</h5>
+										</div>
+
+
+										<div class="card-body">
+											<h5>
+
+												<a class="listOptions" href="view1.html" title="ACS-PUMS – Analysis on Demand" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+											</h5>
+										</div>
+
+										<div class="panel">
+											<div class="panel-header" id="acs-dataset">
+												<h5 class="mb-0">
+													<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+														Select a dataset for queries
+													</a>
+												</h5>
+											</div>
+											<div id="collapse-1-2" class="collapse nested" data-parent="#accordion-1" aria-labelledby="acs-dataset">
+												<div class="card-body">
+													<ul class="accordion-items" role="menu" aria-hidden="false">
+														<li>
+															<a class="listOptions" href="#" title="ACS-PUMS – Household 2015" role="menuitem" tabindex="0">Household 2015</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15035" title="ACS-PUMS – Household 2015" role="menuitem" tabindex="0">Household 2015</a> -->
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="ACS-PUMS – Person 2015" role="menuitem" tabindex="0">Person 2015</a>
+
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15036" title="ACS-PUMS – Person 2015" role="menuitem" tabindex="0">Person 2015</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="ACS-PUMS – Household 2016" role="menuitem" tabindex="0">Household 2016</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15056" title="ACS-PUMS – Household 2016" role="menuitem" tabindex="0">Household 2016</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="ACS-PUMS – Person 2016" role="menuitem" tabindex="0">Person 2016</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15057" title="ACS-PUMS – Person 2016" role="menuitem" tabindex="0">Person 2016</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="ACS-PUMS – Household 2017" role="menuitem" tabindex="0">Household 2017</a>
+
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15144" title="ACS-PUMS – Household 2017" role="menuitem" tabindex="0">Household 2017</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="ACS-PUMS – Person 2017" role="menuitem" tabindex="0">Person 2017</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15145" title="ACS-PUMS – Person 2017" role="menuitem" tabindex="0">Person 2017</a> -->
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- newone -->
+
+						<div class="panel">
+							<div class="panel-header" id="brfss">
+								<h5 class="mb-0">
+									<a role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" aria-hidden="true" tabindex="-1">
+										BRFSS
+									</a>
+								</h5>
+							</div>
+							<div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="brfss">
+								<div class="panel-body">
+									<div id="accordion-2" class="accordions">
+										<div class="card-body">
+											<h5>
+												<a class="listOptions" href="index.html" title="BRFSS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+												<!-- <a class="listOptions" href="RptList.aspx?ScreenID=47" title="BRFSS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+											</h5>
+										</div>
+										<div class="card-body">
+											<h5>
+												<a class="listOptions" href="#" title="BRFSS – Documents" role="menuitem" tabindex="0">Documents</a>
+												<!-- <a class="listOptions" href="RptList.aspx?ScreenID=48" title="BRFSS – Documents" role="menuitem" tabindex="0">Documents</a> -->
+											</h5>
+										</div>
+
+										<div class="card-body">
+											<h5>
+												<a class="listOptions" href="about.html" title="BRFSS – About the Data" role="menuitem" tabindex="0">About the Data</a>
+												<!-- <a class="listOptions" href="RptList.aspx?ScreenID=14778" title="BRFSS – About the Data" role="menuitem" tabindex="0">About the Data</a> -->
+											</h5>
+										</div>
+
+										<div class="card-body">
+											<h5>
+												<a class="listOptions" href="view1.html" title="BRFSS – Create a query" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+											</h5>
+										</div>
+
+
+										<div class="panel">
+											<div class="panel-header" id="brfss-reports">
+												<h5 class="mb-0">
+													<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2-1" aria-expanded="false" aria-controls="collapse-2-1">
+														Customized Reports
+													</a>
+												</h5>
+											</div>
+											<div id="collapse-2-1" class="collapse nested" data-parent="#accordion-1" aria-labelledby="brfss-reports">
+												<div class="card-body">
+
+													<ul class="accordion-items" role="menu" aria-hidden="false">
+														<li>
+															<a class="listOptions" href="#" title="BRFSS – Run Distributions &amp; Summary Statistics" role="menuitem" tabindex="0">Run Distributions &amp; Summary Statistics</a>
+
+															<!-- <a class="listOptions" href="RptList.aspx?ScreenID=14782" title="BRFSS – Run Distributions &amp; Summary Statistics" role="menuitem" tabindex="0">Run Distributions &amp; Summary Statistics</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="BRFSS – Run a Regression" role="menuitem" tabindex="0">Run a Regression</a>
+
+															<!-- <a class="listOptions" href="RptList.aspx?ScreenID=14783" title="BRFSS – Run a Regression" role="menuitem" tabindex="0">Run a Regression</a> -->
+
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- newone -->
+
+						<div class="panel">
+							<div class="panel-header" id="ccd">
+								<h5 class="mb-0">
+									<a role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" aria-hidden="true" tabindex="-1">
+										CCD
+									</a>
+								</h5>
+							</div>
+							<div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="ccd">
+								<div class="panel-body">
+									<div id="accordion-3" class="accordions">
+										<div class="card-body">
+											<h5>
+												<a class="listOptions" href="index.html" title="CCD – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+												<!-- <a class="listOptions" href="RptList.aspx?ScreenID=15041" title="CCD – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+											</h5>
+										</div>
+
+										<div class="card-body">
+											<h5>
+												<a class="listOptions" href="view1.html" title="CCD – Welcome" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+											</h5>
+										</div>
+
+										<div class="panel">
+											<div class="panel-header" id="ccd-dataset">
+												<h5 class="mb-0">
+													<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3-1" aria-expanded="false" aria-controls="collapse-3-1">
+														Select a dataset for queries
+													</a>
+												</h5>
+											</div>
+											<div id="collapse-3-1" class="collapse nested" data-parent="#accordion-3" aria-labelledby="ccd-dataset">
+												<div class="card-body">
+													<ul class="accordion-items" role="menu" aria-hidden="false">
+
+														<li>
+															<a class="listOptions" href="#" title="CCD – CCD 2014-15" role="menuitem" tabindex="0">CCD 2014-15</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15042" title="CCD – CCD 2014-15" role="menuitem" tabindex="0">CCD 2014-15</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CCD – CCD 2015-16" role="menuitem" tabindex="0">CCD 2015-16</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15061" title="CCD – CCD 2015-16" role="menuitem" tabindex="0">CCD 2015-16</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CCD – CCD 2016-17" role="menuitem" tabindex="0">CCD 2016-17</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15140" title="CCD – CCD 2016-17" role="menuitem" tabindex="0">CCD 2016-17</a> -->
+
+														</li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- newone -->
+
+						<div class="panel">
+							<div class="panel-header" id="cps">
+								<h5 class="mb-0">
+									<a role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4" aria-hidden="true" tabindex="-1">
+										CPS
+									</a>
+								</h5>
+							</div>
+							<div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="cps">
+								<div class="panel-body">
+									<div id="accordion-4" class="accordions">
+										<div class="card-body">
+											<h5>
+												<a class="listOptions" href="index.html" title="CPS – Welcome" role="menuitem" tabindex="0">Welcome</a>
+
+												<!-- <a class="listOptions" href="RptList.aspx?ScreenID=15043" title="CPS – Welcome" role="menuitem" tabindex="0">Welcome</a> -->
+											</h5>
+										</div>
+
+										<div class="card-body">
+											<h5>
+
+												<a class="listOptions" href="view1.html" title="CPS – Welcome" role="menuitem" tabindex="0">Analysis on Demand</a>
+
+											</h5>
+										</div>
+
+										<div class="panel">
+											<div class="panel-header" id="cps-dataset">
+												<h5 class="mb-0">
+													<a class="collapsed" role="button" data-toggle="collapse" href="#collapse-4-1" aria-expanded="false" aria-controls="collapse-4-1">
+														Select a dataset for queries
+													</a>
+												</h5>
+											</div>
+											<div id="collapse-4-1" class="collapse nested" data-parent="#accordion-4" aria-labelledby="cps-dataset">
+												<div class="card-body">
+													<ul class="accordion-items" role="menu" aria-hidden="false">
+
+														<li>
+															<a class="listOptions" href="#" title="CPS – Household 2016" role="menuitem" tabindex="0">Household 2016</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15045" title="CPS – Household 2016" role="menuitem" tabindex="0">Household 2016</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Person 2016" role="menuitem" tabindex="0">Person 2016</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15046" title="CPS – Person 2016" role="menuitem" tabindex="0">Person 2016</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Family 2016" role="menuitem" tabindex="0">Family 2016</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15047" title="CPS – Family 2016" role="menuitem" tabindex="0">Family 2016</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Household 2017" role="menuitem" tabindex="0">Household 2017</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15058" title="CPS – Household 2017" role="menuitem" tabindex="0">Household 2017</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Person 2017" role="menuitem" tabindex="0">Person 2017</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15059" title="CPS – Person 2017" role="menuitem" tabindex="0">Person 2017</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Family 2017" role="menuitem" tabindex="0">Family 2017</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15060" title="CPS – Family 2017" role="menuitem" tabindex="0">Family 2017</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Household 2018" role="menuitem" tabindex="0">Household 2018</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15142" title="CPS – Household 2018" role="menuitem" tabindex="0">Household 2018</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Person 2018" role="menuitem" tabindex="0">Person 2018</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15143" title="CPS – Person 2018" role="menuitem" tabindex="0">Person 2018</a> -->
+
+														</li>
+														<li>
+															<a class="listOptions" href="#" title="CPS – Family 2018" role="menuitem" tabindex="0">Family 2018</a>
+															<!-- <a class="listOptions" href="Dim.aspx?ScreenID=15141" title="CPS – Family 2018" role="menuitem" tabindex="0">Family 2018</a> -->
+
+														</li>
+
+
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+
+
+				<div id="slideOutRight">
+					<div id="one" class="orangeTab" role="button" data-toggle="tab" tabindex="0" aria-label="Contact">
+						<center>
+							<p>Zip Case&nbsp;&nbsp;<i class="fal fa-file-archive"></i></p>
+						</center>
+					</div>
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="across">
+								<span class="orange">
+									<i class="fal fa-history"></i>
+								</span>
+								<p class="fileHistory orange">View File History</p>
+							</div>
+							<div class="closeThisPlease" id="close">
+								<button type="button" role="button" class="close" data-dismiss="modal" id="closeThisPlease" tabindex="0" aria-hidden="false" style="opacity:1" aria-label="Close">
+									<span aria-hidden="true">
+										<i class="fal fa-angle-double-right orange"></i>
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-lg-8">
+									<p class="blue strong">Document Description<p>
+									</div>
+									<div class="col-lg-2">
+										<p class="blue strong">Action</p>
+									</div>
+									<div class="col-lg-1">
+										<p class="blue strong">Remove</p>
+									</div>
+								</div>
+								<hr class="orange"></hr>
+								<div class="row">
+									<div class="col-lg-8">
+										<p class="zipCaseDocument">{{data data data data}} PDF</p>
+										<p class="zipCaseDate smaller">Added {{data}}</p>
+									</div>
+									<div class="col-lg-2">
+										<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+									</div>
+									<div class="col-lg-1">
+										<i class="fal fa-trash-alt orange"></i>
+									</div>
+								</div>
+								<hr class="black"></hr>
+
+								<div class="row">
+									<div class="col-lg-8">
+										<p class="zipCaseDocument">{{data data data data}} PDF </p>
+										<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+									</div>
+									<div class="col-lg-2">
+										<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+									</div>
+									<div class="col-lg-1">
+										<i class="fal fa-trash-alt orange"></i>
+									</div>
+								</div>
+								<hr class="black"></hr>
+								<div class="row">
+									<div class="col-lg-8">
+										<p class="zipCaseDocument">{{data data data data}} PDF </p>
+										<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+									</div>
+									<div class="col-lg-2">
+										<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+									</div>
+									<div class="col-lg-1">
+										<i class="fal fa-trash-alt orange"></i>
+									</div>
+								</div>
+								<hr class="black"></hr>
+								<div class="row">
+									<div class="col-lg-8">
+										<p class="zipCaseDocument">{{data data data data}} PDF </p>
+										<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+									</div>
+									<div class="col-lg-2">
+										<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+									</div>
+									<div class="col-lg-1">
+										<i class="fal fa-trash-alt orange"></i>
+									</div>
+								</div>
+								<hr class="black"></hr>
+								<div class="row">
+									<div class="col-lg-8">
+										<p class="zipCaseDocument">{{data data data data}} PDF </p>
+										<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+									</div>
+									<div class="col-lg-2">
+										<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+									</div>
+									<div class="col-lg-1">
+										<i class="fal fa-trash-alt orange"></i>
+									</div>
+								</div>
+								<hr class="black"></hr>
+								<div class="row">
+									<div class="col-lg-8">
+										<p class="zipCaseDocument">{{data data data data}} PDF </p>
+										<p class="zipCaseDate smaller">Added {{data data data data}}</p>
+									</div>
+									<div class="col-lg-2">
+										<p class="orange">View&nbsp;&nbsp;<span><i class="fal fa-file-pdf"></i></span></p>
+									</div>
+									<div class="col-lg-1">
+										<i class="fal fa-trash-alt orange"></i>
+									</div>
+								</div>
+								<hr class="black"></hr>
+							</div>
+							<div class="row">
+								<div class="col-lg-12 col-xs-12">
+									<form>
+										<div class="form-group">
+											<label for="exampleFormControlTextarea1"><p class="blue strong">Notes</p></label>
+											<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notes, etc."></textarea>
+										</div>
+
+
+										<div class="form-group">
+											<label for="exampleFormControlTextarea1"><p class="blue strong">Zip File Name</p></label>
+											<input id="term_input" class="form-control allResults" placeholder="Name of file, example, etc." type="text" name="search">
+
+										</div>
+
+										<center>
+											<a href="#"><div class="orangeBubble"><i class="fal fa-download">&nbsp;&nbsp;</i>Download</div></a>
+										</center>
+
+									</form>
+								</div>
+							</div>
+
+							<!-- <div class="modal-footer">
+
+
+						</div> -->
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+
+		<div class="row reports">
+			<div class="col-xl-3 offset-xl-1 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+				<div class="whiteBubble first">
+
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Report List A</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Report List B</a>
+						</li>
+
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="tabs-1" role="tabpanel">
+							<div class="rel">
+								<fieldset>
+									<legend class="hidden"></legend>
+									<label>
+										<i class="fal fa-search searchBar"></i>
+										<input type="text" placeholder="Find" class="tTestSearch  searchTxt-default">
+									</label>
+								</fieldset>
+							</div>
+							<br>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Outcome Measures Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Outcome Measures Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Multi-Year Outcome Measures Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Notification Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Reassessment Interview Rate Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by FFY Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by FFY Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by Grant Year Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by Grant Year Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Point in Time Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Point in Time Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Discharge Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+
+						</div>
+						<div class="tab-pane" id="tabs-2" role="tabpanel">
+							<div class="rel">
+								<fieldset>
+									<legend class="hidden"></legend>
+									<label>
+										<i class="fal fa-search searchBar"></i>
+										<input type="text" placeholder="Find" class="tTestSearch  searchTxt-default">
+									</label>
+								</fieldset>
+							</div>
+							<br>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Notification Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Reassessment Interview Rate Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by FFY Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by FFY Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by Grant Year Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Number of Consumer Served by Grant Year Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Point in Time Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Point in Time Report (CMHS only)</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+							<div class="reportList d-flex justify-content-between align-items-baseline">
+
+								<p class="smaller">Services Discharge Report</p>
+								<i class="fal fa-angle-right orange"></i>
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+			</div>
+			<div class="white col-xl-7 col-lg-9 col-md-12 col-sm-12 col-xs-12">
+				<div class="d-flex justify-content-around p1">
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<h5 class="strong black text-center">Parameters</h5>
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							<p class="blue strong">Format</p>
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="html" autocomplete="off">HTML
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="pdf" autocomplete="off">PDF
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="excel" autocomplete="off">Excel
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="rtf" autocomplete="off">RTF
+								</label>
+							</div>
+
+							<p class="blue strong">Year</p>
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="2013" autocomplete="off">2013
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="2014" autocomplete="off">2014
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="all" autocomplete="off">All
+								</label>
+
+							</div>
+							<p class="blue strong">State or Territory</p>
+							<div class="rel mb2">
+								<fieldset>
+									<legend class="hidden"></legend>
+									<label>
+										<i class="fal fa-search searchBar"></i>
+										<input type="text" placeholder="Search or select" class="tTestSearch largerSearch searchTxt-default">
+									</label>
+								</fieldset>
+							</div>
+							<h5 class="strong black text-center">Demographic Variable(s)</h5>
+
+						</div>
+						<div class="whiteBubble">
+							<ul>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Include All" class="custom-control-input" id="allInclude">
+									<label class="custom-control-label" for="allInclude">Include All</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Transgender" class="custom-control-input" id="transgender">
+									<label class="custom-control-label" for="transgender">Consider yourself transgender (2014 only)</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Employment status" class="custom-control-input" id="employment">
+									<label class="custom-control-label" for="employment">Employment status</label>
+								</li>
+
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Highest year of school" class="custom-control-input" id="school">
+									<label class="custom-control-label" for="school">Highest year of school</label>
+								</li>
+
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Imputed own or rent home" class="custom-control-input" id="home">
+									<label class="custom-control-label" for="home">Imputed own or rent home</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Marital Status" class="custom-control-input" id="marital">
+									<label class="custom-control-label" for="marital">Marital Status</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Number of adults in household" class="custom-control-input" id="household">
+									<label class="custom-control-label" for="household">Number of adults in household</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Race" class="custom-control-input" id="Race">
+									<label class="custom-control-label" for="Race">Race</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Sex" class="custom-control-input" id="Sex">
+									<label class="custom-control-label" for="Sex">Sex</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Sexual Orientation (2014 only)" class="custom-control-input" id="orientation">
+									<label class="custom-control-label" for="orientation">Sexual Orientation (2014 only)</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="State" class="custom-control-input" id="state">
+									<label class="custom-control-label" for="state">State</label>
+								</li>
+								<li class="custom-control custom-checkbox">
+									<input type="checkbox" name="demographics" value="Weight in pounds" class="custom-control-input" id="weight">
+									<label class="custom-control-label" for="weight">Weight in pounds</label>
+								</li>
+
+							</ul>
+
+
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<h5 class="strong black text-center">Survey Variables</h5>
+						<div class="whiteBubble">
+							<div class="d-flex justify-content-end">
+								<p class="orange smallest">
+									<i class="fal fa-undo orange" tabindex="0" role="button"></i>&nbsp;Clear</p>
+
+								</div>
+
+								<br>
+
+								<ul>
+
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="Include All" class="custom-control-input" id="includeAll">
+										<label class="custom-control-label" for="includeAll">Include All</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="cancer" class="custom-control-input" id="cancer">
+										<label class="custom-control-label" for="cancer">Age diagnosed with cancer (2014 only)</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="sleep" class="custom-control-input" id="sleep">
+										<label class="custom-control-label" for="sleep">Amount of sleep in 24 hours</label>
+									</li>
+
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="COPD" class="custom-control-input" id="COPD">
+										<label class="custom-control-label" for="COPD">COPD</label>
+									</li>
+
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="Exercise past 30 days" class="custom-control-input" id="exercise">
+										<label class="custom-control-label" for="exercise">Exercise past 30 days</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="Had heart attack" class="custom-control-input" id="heart-attack">
+										<label class="custom-control-label" for="heart-attack">Had heart attack</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="How long since last smoked" class="custom-control-input" id="smoking">
+										<label class="custom-control-label" for="smoking">How long since last smoked</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="Skin cancer" class="custom-control-input" id="skinCancer">
+										<label class="custom-control-label" for="skinCancer">Skin cancer</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="What type of cancer (2014 only)" class="custom-control-input" id="cancer-type">
+										<label class="custom-control-label" for="cancer-type">What type of cancer (2014 only)</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="Number of times doctor in past 12 months" class="custom-control-input" id="doctor-visit">
+										<label class="custom-control-label" for="doctor-type">Number of times doctor in past 12 months</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="Injured in fall (2014 only)" class="custom-control-input" id="injured">
+										<label class="custom-control-label" for="injured">Injured in fall (2014 only)</label>
+									</li>
+									<li class="custom-control custom-checkbox">
+										<input type="checkbox" name="survey" value="Primary source health coverage (2014 only)" class="custom-control-input" id="coverage">
+										<label class="custom-control-label" for="coverage">Primary source health coverage (2014 only)</label>
+									</li>
+
+								</ul>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row rel">
+				<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="d-flex justify-content-end reportBubbles">
+						<a href="#"><div class="orangeBubble">View Default Report</div></a>
+						<a href="#"><div class="orangeBubble">Report View Modified Report</div></a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="backdropShadow"></div>
+		</div>
+
+		<footer>
+			<div class="footer-wrapper">
+
+				<a href="https://www.westat.com" target="_blank" title="Visit website">
+					<img src="images/footer_westat_logo.svg" alt="Westat Home page" title="Westat" class="img-wes-logo"></a> <p class="p-wes-title t-white">An Employee-Owned Research Corporation<sup class="t-white">®</sup></p></div>
+				</footer>
+
+
+				<script
+				src="https://code.jquery.com/jquery-3.4.1.min.js"
+				integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+				crossorigin="anonymous"></script>
+
+				<script
+				src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+				integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+				crossorigin="anonymous"></script>
+
+				<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+				<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+				<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+				<script src="js/bootstrap.js"></script> -->
+
+
+
+				<script type="text/javascript" src="build/index.js"></script>
+
+			</body>
+			</html>
